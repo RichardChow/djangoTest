@@ -1,0 +1,54 @@
+{% extends "rest_framework/base.html" %}
+{% load config_filters %}
+
+{% block content %}
+<div class="container">
+    <h2>Current Configuration</h2>
+    <div class="current-config">
+        <h3>Current Upgrade Types:</h3>
+        <pre>{{ config.upgrade_type|newline_join }}</pre>
+        
+        <h3>Current Work Types:</h3>
+        <pre>{{ config.work_type|newline_join }}</pre>
+        
+        <h3>Current Environments:</h3>
+        <pre>{{ config.environments|json }}</pre>
+    </div>
+
+    <h2>Update Configuration</h2>
+    <form action="{% url 'config-list' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="upgrade_type">Upgrade Types (每行一个):</label>
+            <textarea class="form-control" id="upgrade_type" name="upgrade_type" rows="4">{{ config.upgrade_type|newline_join }}</textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="work_type">Work Types (每行一个):</label>
+            <textarea class="form-control" id="work_type" name="work_type" rows="4">{{ config.work_type|newline_join }}</textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="environments">Environments (JSON格式):</label>
+            <textarea class="form-control" id="environments" name="environments" rows="4">{{ config.environments|json }}</textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script>
+// 添加一个自定义过滤器来格式化 JSON
+document.addEventListener('DOMContentLoaded', function() {
+    const envTextarea = document.getElementById('environments');
+    if (envTextarea.value) {
+        try {
+            const jsonData = JSON.parse(envTextarea.value);
+            envTextarea.value = JSON.stringify(jsonData, null, 2);
+        } catch (e) {
+            console.error('Error parsing JSON:', e);
+        }
+    }
+});
+</script>
+{% endblock %}
