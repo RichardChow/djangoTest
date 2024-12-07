@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import sys
 import io
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'config_api',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +69,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'config_api' / 'templates',  # 添加这一行
+            BASE_DIR / 'config_api' / 'templates',  # 现在这行可以工作了
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -93,6 +95,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# 确保数据库文件有正确的权限
 
 
 # Password validation
@@ -155,36 +159,65 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'format': '[{levelname}] {asctime} {module} {process:d} {thread:d} {message}',
             'style': '{',
         },
     },
     'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
-        },
         'file': {
+            'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': BASE_DIR / 'django_backend.log',
             'formatter': 'verbose',
             'encoding': 'utf-8',
         },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
     },
     'loggers': {
-        'django': {
-            'handlers': ['console', 'file'],
-            'level': 'INFO',
+        'config_api': {
+            'handlers': ['file', 'console'],
+            'level': 'DEBUG',
             'propagate': True,
         },
-        'config_api': {
-            'handlers': ['console', 'file'],
+        'ssh_cli': {
+            'handlers': ['file', 'console'],
             'level': 'DEBUG',
-            'propagate': False,
+            'propagate': True,
         },
     },
-    'root': {
-        'handlers': ['console', 'file'],
-        'level': 'INFO',
-    },
 }
+
+# 添加 ASGI 应用配置
+ASGI_APPLICATION = 'django_backend.asgi.application'
+
+# 添加 Channel Layers 配置
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
+}
+
+# 允许WebSocket的域名
+ALLOWED_HOSTS = ['*', '172.18.100.176', 'localhost']
+
+# WebSocket的CORS设置
+CORS_ALLOWED_ORIGINS = [
+    "http://172.18.100.176:8082",
+    "ws://172.18.100.176:8082",
+    "http://localhost:8082",
+    "ws://localhost:8082",
+]
+
+# 允许的HTTP方法
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]

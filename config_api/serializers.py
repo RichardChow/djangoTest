@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Config
+from .models import Config, Build, BuildLog
 import logging
 import json
 
@@ -79,4 +79,22 @@ class ConfigSerializer(serializers.ModelSerializer):
         if 'env_ip_map' in validated_data:
             instance.set_env_ip_map(validated_data['env_ip_map'])
         instance.save()
+        return instance
+
+class BuildLogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BuildLog
+        fields = ['id', 'message', 'log_type', 'timestamp']
+
+class BuildSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Build
+        fields = ['id', 'upgrade_type', 'work_type', 'ne_ip', 'ne_ip_input', 
+                 'version_path', 'status', 'created_at', 'updated_at']
+        read_only_fields = ['id', 'created_at', 'updated_at']
+
+    def create(self, validated_data):
+        logger.info(f"正在创建构建记录: {validated_data}")
+        instance = super().create(validated_data)
+        logger.info(f"构建记录创建成功: {instance.id}")
         return instance

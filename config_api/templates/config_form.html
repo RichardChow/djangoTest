@@ -35,20 +35,73 @@
         
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <h2>升级控制</h2>
+    <div class="upgrade-control">
+        <button id="startUpgrade" class="btn btn-primary">开始更新</button>
+        <div id="upgradeStatus" class="mt-3" style="display: none;">
+            <h3>升级日志:</h3>
+            <pre id="upgradeLogs" style="height: 300px; overflow-y: auto; background: #f5f5f5; padding: 10px;"></pre>
+        </div>
+    </div>
 </div>
 
 <script>
-// 添加一个自定义过滤器来格式化 JSON
-document.addEventListener('DOMContentLoaded', function() {
-    const envTextarea = document.getElementById('environments');
-    if (envTextarea.value) {
-        try {
-            const jsonData = JSON.parse(envTextarea.value);
-            envTextarea.value = JSON.stringify(jsonData, null, 2);
-        } catch (e) {
-            console.error('Error parsing JSON:', e);
-        }
-    }
+function startWebSocket(taskId) {
+    // 修改WebSocket连接URL，确保与后端路由匹配
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const ws = new WebSocket(`${protocol}//${window.location.host}/ws/upgrade/${taskId}/`);
+    
+    ws.onopen = function() {
+        console.log('WebSocket connection established');
+    };
+    
+    ws.onmessage = function(e) {
+        const data = JSON.parse(e.data);
+        const logsElement = document.getElementById('upgradeLogs');
+        logsElement.textContent += data.message + '\n';
+        logsElement.scrollTop = logsElement.scrollHeight;
+    };
+    
+    ws.onclose = function() {
+        console.log('WebSocket connection closed');
+    };
+
+    ws.onerror = function(error) {
+        console.error('WebSocket error:', error);
+    };
+    
+    return ws;
+}
+
+document.getElementById('startUpgrade').addEventListener('click', function() {
+    // 获取当前配置
+    const config = {
+        upgrade_type: document.querySelector('pre:nth-of-type(1)').textContent,
+        work_type: document.querySelector('pre:nth-of-type(2)').textContent,
+        environments: JSON.parse(document.querySelector('pre:nth-of-type(3)').textContent)
+    };
+    
+    // 显示日志区域
+    document.getElementById('upgradeStatus').style.display = 'block';
+    
+    // 发送升级请求
+    fetch('/api/config/upgrade/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(config)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Upgrade started:', data);
+        const ws = startWebSocket(data.task_id);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('upgradeLogs').textContent += '\nError: ' + error.message;
+    });
 });
 </script>
 {% endblock %}
