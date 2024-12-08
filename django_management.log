@@ -1,41 +1,456 @@
-2024-10-22 16:46:19,494 - INFO - Starting Django management command
-2024-10-22 16:46:22,978 - INFO - Starting Django management command
-2024-10-22 16:47:26,841 - INFO - Starting Django management command
-2024-10-22 16:47:27,535 - INFO - Starting Django management command
-2024-10-22 16:50:31,092 - INFO - Starting Django management command
-2024-10-22 16:50:39,629 - INFO - Starting Django management command
-2024-10-22 16:50:40,311 - INFO - Starting Django management command
-2024-10-22 16:52:06,519 - INFO - Starting Django management command
-2024-10-22 16:52:38,943 - INFO - Starting Django management command
-2024-10-22 16:54:18,429 - INFO - Starting Django management command
-2024-10-22 17:17:45,959 - INFO - Starting Django management command
-2024-10-22 17:18:34,384 - INFO - Starting Django management command
-2024-10-22 18:35:45,492 - INFO - Starting Django management command
-2024-10-22 18:36:18,405 - INFO - Starting Django management command
-2024-10-22 18:36:44,493 - INFO - Starting Django management command
-2024-10-22 18:36:50,538 - INFO - Starting Django management command
-2024-10-22 18:37:50,541 - INFO - Starting Django management command
-2024-10-22 18:37:56,756 - INFO - Starting Django management command
-2024-10-22 18:47:43,336 - INFO - Starting Django management command
-2024-10-22 18:48:03,776 - INFO - Starting Django management command
-2024-10-22 18:48:24,369 - INFO - Starting Django management command
-2024-10-22 18:48:25,048 - INFO - Starting Django management command
-2024-10-22 19:22:51,214 - INFO - Starting Django management command
-2024-10-23 13:37:49,990 - INFO - Starting Django management command
-2024-10-23 15:18:53,917 - INFO - Starting Django management command
-2024-10-24 16:45:31,924 - INFO - Starting Django management command
-2024-10-24 16:48:17,055 - INFO - Starting Django management command
-2024-10-24 16:51:13,016 - INFO - Starting Django management command
-2024-10-24 16:52:49,980 - INFO - Starting Django management command
-2024-10-24 17:06:41,823 - INFO - Starting Django management command
-2024-10-24 17:31:56,233 - INFO - Starting Django management command
-2024-10-24 17:37:11,720 - INFO - Starting Django management command
-2024-10-24 17:37:16,600 - INFO - Starting Django management command
-2024-10-24 17:37:17,313 - INFO - Starting Django management command
-2024-10-24 17:37:47,320 - INFO - Starting Django management command
-2024-10-24 18:51:22,577 - INFO - Starting Django management command
-2024-10-24 18:51:53,704 - INFO - Starting Django management command
-2024-10-28 15:42:09,261 - INFO - Starting Django management command
-2024-10-28 15:44:32,785 - INFO - Starting Django management command
-2024-10-28 16:06:28,700 - INFO - Starting Django management command
-2024-10-28 16:06:29,454 - INFO - Starting Django management command
+2024-12-08 14:43:29,991 - INFO - Starting Django management command
+2024-12-08 14:43:54,181 - INFO - Starting Django management command
+2024-12-08 14:44:45,785 - INFO - Starting Django management command
+2024-12-08 14:44:45,793 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 14:44:45,793 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 14:44:45,794 - INFO - 数据库文件权限: 666
+2024-12-08 14:44:45,794 - INFO - 数据库文件大小: 147456 bytes
+2024-12-08 14:44:45,794 - INFO - 数据库文件所有者: 0
+2024-12-08 14:44:46,197 - INFO - Starting Django management command
+2024-12-08 14:44:46,206 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 14:44:46,206 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 14:44:46,206 - INFO - 数据库文件权限: 666
+2024-12-08 14:44:46,206 - INFO - 数据库文件大小: 147456 bytes
+2024-12-08 14:44:46,208 - INFO - 数据库文件所有者: 0
+2024-12-08 14:44:46,380 - INFO - Watching for file changes with StatReloader
+2024-12-08 14:44:46,469 - INFO - Views module loaded
+2024-12-08 14:44:46,469 - INFO - Logger test from views.py
+2024-12-08 14:44:46,470 - ERROR - Logger error test from views.py
+2024-12-08 14:44:46,922 - INFO - Successfully imported ssh_cli
+2024-12-08 14:44:46,978 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 14:44:46,981 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 14:45:18,974 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-08 14:45:18,985 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC LIMIT 21; args=(); alias=default
+2024-12-08 14:45:18,986 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC LIMIT 21; args=(); alias=default
+2024-12-08 14:45:19,024 - ERROR - Internal Server Error: /api/devices/
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: config_api_device
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "B:\pzhou_worksapce\djangoTest\config_api\views.py", line 513, in get_queryset
+    logger.info(f"查询设备列表，总数：{queryset.count()}")
+                             ^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\sql\query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\sql\query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: config_api_device
+2024-12-08 14:45:19,030 - ERROR - "GET /api/devices/?search= HTTP/1.1" 500 162852
+2024-12-08 14:45:25,528 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-08 14:45:25,539 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC LIMIT 21; args=(); alias=default
+2024-12-08 14:45:25,540 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC LIMIT 21; args=(); alias=default
+2024-12-08 14:45:25,568 - ERROR - Internal Server Error: /api/devices/
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: config_api_device
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "B:\pzhou_worksapce\djangoTest\config_api\views.py", line 513, in get_queryset
+    logger.info(f"查询设备列表，总数：{queryset.count()}")
+                             ^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\sql\query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\sql\query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: config_api_device
+2024-12-08 14:45:25,571 - ERROR - "GET /api/devices/?search= HTTP/1.1" 500 162852
+2024-12-08 14:46:29,501 - INFO - B:\pzhou_worksapce\djangoTest\django_backend\settings.py changed, reloading.
+2024-12-08 14:46:29,756 - INFO - Starting Django management command
+2024-12-08 14:46:29,767 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 14:46:29,768 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 14:46:29,768 - INFO - 数据库文件权限: 666
+2024-12-08 14:46:29,768 - INFO - 数据库文件大小: 147456 bytes
+2024-12-08 14:46:29,770 - INFO - 数据库文件所有者: 0
+2024-12-08 14:46:29,946 - INFO - Watching for file changes with StatReloader
+2024-12-08 14:46:30,002 - INFO - Views module loaded
+2024-12-08 14:46:30,002 - INFO - Logger test from views.py
+2024-12-08 14:46:30,005 - ERROR - Logger error test from views.py
+2024-12-08 14:46:30,309 - INFO - Successfully imported ssh_cli
+2024-12-08 14:46:30,363 - DEBUG - (0.016) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 14:46:30,365 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 14:46:52,938 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-08 14:46:52,949 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC LIMIT 21; args=(); alias=default
+2024-12-08 14:46:52,950 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC LIMIT 21; args=(); alias=default
+2024-12-08 14:46:52,980 - ERROR - Internal Server Error: /api/devices/
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: config_api_device
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "B:\pzhou_worksapce\djangoTest\config_api\views.py", line 513, in get_queryset
+    logger.info(f"查询设备列表，总数：{queryset.count()}")
+                             ^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\sql\query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\sql\query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: config_api_device
+2024-12-08 14:46:52,986 - ERROR - "GET /api/devices/?search= HTTP/1.1" 500 162854
+2024-12-08 16:05:55,435 - INFO - B:\pzhou_worksapce\djangoTest\django_backend\settings.py changed, reloading.
+2024-12-08 16:05:55,759 - INFO - Starting Django management command
+2024-12-08 16:05:55,777 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 16:05:55,777 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 16:05:55,777 - INFO - 数据库文件权限: 666
+2024-12-08 16:05:55,786 - INFO - 数据库文件大小: 147456 bytes
+2024-12-08 16:05:55,786 - INFO - 数据库文件所有者: 0
+2024-12-08 16:05:55,992 - INFO - Watching for file changes with StatReloader
+2024-12-08 16:07:24,140 - INFO - Starting Django management command
+2024-12-08 16:07:24,147 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 16:07:24,147 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 16:07:24,148 - INFO - 数据库文件权限: 666
+2024-12-08 16:07:24,148 - INFO - 数据库文件大小: 147456 bytes
+2024-12-08 16:07:24,148 - INFO - 数据库文件所有者: 0
+2024-12-08 16:07:57,186 - INFO - Starting Django management command
+2024-12-08 16:07:57,193 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 16:07:57,193 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 16:07:57,193 - INFO - 数据库文件权限: 666
+2024-12-08 16:07:57,194 - INFO - 数据库文件大小: 147456 bytes
+2024-12-08 16:07:57,195 - INFO - 数据库文件所有者: 0
+2024-12-08 16:12:47,007 - INFO - B:\pzhou_worksapce\djangoTest\config_api\views.py changed, reloading.
+2024-12-08 16:12:47,217 - INFO - Starting Django management command
+2024-12-08 16:12:47,225 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 16:12:47,225 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 16:12:47,226 - INFO - 数据库文件权限: 666
+2024-12-08 16:12:47,227 - INFO - 数据库文件大小: 147456 bytes
+2024-12-08 16:12:47,227 - INFO - 数据库文件所有者: 0
+2024-12-08 16:12:47,403 - INFO - Watching for file changes with StatReloader
+2024-12-08 16:12:47,475 - INFO - Views module loaded
+2024-12-08 16:12:47,475 - INFO - Logger test from views.py
+2024-12-08 16:12:47,476 - ERROR - Logger error test from views.py
+2024-12-08 16:12:47,774 - INFO - Successfully imported ssh_cli
+2024-12-08 16:12:47,822 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 16:12:47,825 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 16:12:50,551 - INFO - Starting Django management command
+2024-12-08 16:12:50,558 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 16:12:50,558 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 16:12:50,559 - INFO - 数据库文件权限: 666
+2024-12-08 16:12:50,559 - INFO - 数据库文件大小: 147456 bytes
+2024-12-08 16:12:50,559 - INFO - 数据库文件所有者: 0
+2024-12-08 16:12:50,782 - INFO - Views module loaded
+2024-12-08 16:12:50,782 - INFO - Logger test from views.py
+2024-12-08 16:12:50,783 - ERROR - Logger error test from views.py
+2024-12-08 16:12:51,067 - INFO - Successfully imported ssh_cli
+2024-12-08 16:12:51,101 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 16:12:51,103 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 16:12:51,118 - INFO - Django management command completed
+2024-12-08 16:13:03,860 - INFO - Starting Django management command
+2024-12-08 16:13:03,866 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 16:13:03,866 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 16:13:03,867 - INFO - 数据库文件权限: 666
+2024-12-08 16:13:03,869 - INFO - 数据库文件大小: 147456 bytes
+2024-12-08 16:13:03,869 - INFO - 数据库文件所有者: 0
+2024-12-08 16:13:04,055 - DEBUG - (0.000) BEGIN; args=None; alias=default
+2024-12-08 16:13:04,056 - DEBUG - (0.000) SELECT JSON('{"a": "b"}'); args=None; alias=default
+2024-12-08 16:13:04,056 - DEBUG - (0.000) COMMIT; args=None; alias=default
+2024-12-08 16:13:04,112 - INFO - Views module loaded
+2024-12-08 16:13:04,112 - INFO - Logger test from views.py
+2024-12-08 16:13:04,112 - ERROR - Logger error test from views.py
+2024-12-08 16:13:04,396 - INFO - Successfully imported ssh_cli
+2024-12-08 16:13:04,440 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 16:13:04,441 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 16:13:04,443 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 16:13:04,444 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 16:13:04,450 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 16:13:04,451 - DEBUG - (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2024-12-08 16:13:04,451 - DEBUG - (0.000) PRAGMA foreign_keys; args=None; alias=default
+2024-12-08 16:13:04,451 - DEBUG - (0.000) BEGIN; args=None; alias=default
+2024-12-08 16:13:04,452 - DEBUG - CREATE TABLE "config_api_device" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "ip_address" varchar(15) NOT NULL, "device_type" varchar(50) NOT NULL, "rack_number" varchar(50) NOT NULL, "position" integer NOT NULL, "status" varchar(20) NOT NULL, "last_updated" datetime NOT NULL); (params None)
+2024-12-08 16:13:04,453 - DEBUG - (0.000) CREATE TABLE "config_api_device" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "ip_address" varchar(15) NOT NULL, "device_type" varchar(50) NOT NULL, "rack_number" varchar(50) NOT NULL, "position" integer NOT NULL, "status" varchar(20) NOT NULL, "last_updated" datetime NOT NULL); args=None; alias=default
+2024-12-08 16:13:04,454 - DEBUG - CREATE TABLE "config_api_devicemodel" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "image" varchar(100) NOT NULL, "model_data" text NOT NULL CHECK ((JSON_VALID("model_data") OR "model_data" IS NULL)), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL); (params None)
+2024-12-08 16:13:04,455 - DEBUG - (0.000) CREATE TABLE "config_api_devicemodel" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "image" varchar(100) NOT NULL, "model_data" text NOT NULL CHECK ((JSON_VALID("model_data") OR "model_data" IS NULL)), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL); args=None; alias=default
+2024-12-08 16:13:04,456 - DEBUG - CREATE TABLE "config_api_devicetype" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "type_id" varchar(50) NOT NULL UNIQUE, "name" varchar(100) NOT NULL, "model_config" text NOT NULL CHECK ((JSON_VALID("model_config") OR "model_config" IS NULL))); (params None)
+2024-12-08 16:13:04,456 - DEBUG - (0.000) CREATE TABLE "config_api_devicetype" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "type_id" varchar(50) NOT NULL UNIQUE, "name" varchar(100) NOT NULL, "model_config" text NOT NULL CHECK ((JSON_VALID("model_config") OR "model_config" IS NULL))); args=None; alias=default
+2024-12-08 16:13:04,457 - DEBUG - CREATE TABLE "config_api_rack" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "number" varchar(50) NOT NULL UNIQUE, "row" integer NOT NULL, "column" integer NOT NULL, "total_units" integer NOT NULL); (params None)
+2024-12-08 16:13:04,457 - DEBUG - (0.000) CREATE TABLE "config_api_rack" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "number" varchar(50) NOT NULL UNIQUE, "row" integer NOT NULL, "column" integer NOT NULL, "total_units" integer NOT NULL); args=None; alias=default
+2024-12-08 16:13:04,459 - DEBUG - CREATE TABLE "new__config_api_build" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upgrade_type" varchar(100) NOT NULL, "work_type" varchar(100) NOT NULL, "ne_ip" varchar(255) NOT NULL, "version_path" varchar(500) NOT NULL, "status" varchar(20) NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ne_ip_input" varchar(255) NULL); (params None)
+2024-12-08 16:13:04,459 - DEBUG - (0.000) CREATE TABLE "new__config_api_build" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "upgrade_type" varchar(100) NOT NULL, "work_type" varchar(100) NOT NULL, "ne_ip" varchar(255) NOT NULL, "version_path" varchar(500) NOT NULL, "status" varchar(20) NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ne_ip_input" varchar(255) NULL); args=None; alias=default
+2024-12-08 16:13:04,459 - DEBUG - INSERT INTO "new__config_api_build" ("id", "upgrade_type", "work_type", "ne_ip", "version_path", "status", "created_at", "updated_at", "ne_ip_input") SELECT "id", "upgrade_type", "work_type", "ne_ip", "version_path", "status", "created_at", "updated_at", "ne_ip_input" FROM "config_api_build"; (params ())
+2024-12-08 16:13:04,460 - DEBUG - (0.000) INSERT INTO "new__config_api_build" ("id", "upgrade_type", "work_type", "ne_ip", "version_path", "status", "created_at", "updated_at", "ne_ip_input") SELECT "id", "upgrade_type", "work_type", "ne_ip", "version_path", "status", "created_at", "updated_at", "ne_ip_input" FROM "config_api_build"; args=(); alias=default
+2024-12-08 16:13:04,460 - DEBUG - DROP TABLE "config_api_build"; (params ())
+2024-12-08 16:13:04,460 - DEBUG - (0.000) DROP TABLE "config_api_build"; args=(); alias=default
+2024-12-08 16:13:04,460 - DEBUG - ALTER TABLE "new__config_api_build" RENAME TO "config_api_build"; (params ())
+2024-12-08 16:13:04,461 - DEBUG - (0.000) ALTER TABLE "new__config_api_build" RENAME TO "config_api_build"; args=(); alias=default
+2024-12-08 16:13:04,463 - DEBUG - CREATE TABLE "config_api_rackconfiguration" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "rack_number" varchar(50) NOT NULL, "position" integer NOT NULL, "device_type_id" bigint NOT NULL REFERENCES "config_api_devicetype" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+2024-12-08 16:13:04,463 - DEBUG - (0.000) CREATE TABLE "config_api_rackconfiguration" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "rack_number" varchar(50) NOT NULL, "position" integer NOT NULL, "device_type_id" bigint NOT NULL REFERENCES "config_api_devicetype" ("id") DEFERRABLE INITIALLY DEFERRED); args=None; alias=default
+2024-12-08 16:13:04,463 - DEBUG - (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2024-12-08 16:13:04,463 - DEBUG - CREATE INDEX "config_api_rackconfiguration_device_type_id_e02c8829" ON "config_api_rackconfiguration" ("device_type_id"); (params ())
+2024-12-08 16:13:04,464 - DEBUG - (0.000) CREATE INDEX "config_api_rackconfiguration_device_type_id_e02c8829" ON "config_api_rackconfiguration" ("device_type_id"); args=(); alias=default
+2024-12-08 16:13:04,468 - DEBUG - (0.000) COMMIT; args=None; alias=default
+2024-12-08 16:13:04,469 - DEBUG - (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2024-12-08 16:13:04,469 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 16:13:04,470 - DEBUG - (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('config_api', '0002_device_devicemodel_devicetype_rack_and_more', '2024-12-08 08:13:04.470207') RETURNING "django_migrations"."id"; args=('config_api', '0002_device_devicemodel_devicetype_rack_and_more', '2024-12-08 08:13:04.470207'); alias=default
+2024-12-08 16:13:04,474 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 16:13:04,475 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 16:13:04,482 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2024-12-08 16:13:04,482 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+2024-12-08 16:13:04,485 - DEBUG - (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+2024-12-08 16:13:04,486 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2024-12-08 16:13:04,486 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2024-12-08 16:13:04,487 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+2024-12-08 16:13:04,488 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+2024-12-08 16:13:04,488 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+2024-12-08 16:13:04,489 - DEBUG - (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default
+2024-12-08 16:13:04,490 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2024-12-08 16:13:04,490 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2024-12-08 16:13:04,491 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+2024-12-08 16:13:04,492 - DEBUG - (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default
+2024-12-08 16:13:04,492 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2024-12-08 16:13:04,493 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2024-12-08 16:13:04,493 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+2024-12-08 16:13:04,494 - DEBUG - (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default
+2024-12-08 16:13:04,495 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2024-12-08 16:13:04,495 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'config_api'; args=('config_api',); alias=default
+2024-12-08 16:13:04,496 - DEBUG - (0.000) BEGIN; args=None; alias=default
+2024-12-08 16:13:04,496 - DEBUG - (0.000) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('config_api', 'device'), ('config_api', 'devicemodel'), ('config_api', 'devicetype'), ('config_api', 'rack'), ('config_api', 'rackconfiguration') RETURNING "django_content_type"."id"; args=('config_api', 'device', 'config_api', 'devicemodel', 'config_api', 'devicetype', 'config_api', 'rack', 'config_api', 'rackconfiguration'); alias=default
+2024-12-08 16:13:04,500 - DEBUG - (0.000) COMMIT; args=None; alias=default
+2024-12-08 16:13:04,501 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'build') LIMIT 21; args=('config_api', 'build'); alias=default
+2024-12-08 16:13:04,501 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'config') LIMIT 21; args=('config_api', 'config'); alias=default
+2024-12-08 16:13:04,502 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'buildlog') LIMIT 21; args=('config_api', 'buildlog'); alias=default
+2024-12-08 16:13:04,503 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'device') LIMIT 21; args=('config_api', 'device'); alias=default
+2024-12-08 16:13:04,503 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'devicemodel') LIMIT 21; args=('config_api', 'devicemodel'); alias=default
+2024-12-08 16:13:04,504 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'devicetype') LIMIT 21; args=('config_api', 'devicetype'); alias=default
+2024-12-08 16:13:04,504 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'rack') LIMIT 21; args=('config_api', 'rack'); alias=default
+2024-12-08 16:13:04,505 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'rackconfiguration') LIMIT 21; args=('config_api', 'rackconfiguration'); alias=default
+2024-12-08 16:13:04,506 - DEBUG - (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 11, 12, 13, 14) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 11, 12, 13, 14); alias=default
+2024-12-08 16:13:04,507 - DEBUG - (0.000) BEGIN; args=None; alias=default
+2024-12-08 16:13:04,508 - DEBUG - (0.000) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") VALUES ('Can add 设备', 10, 'add_device'), ('Can change 设备', 10, 'change_device'), ('Can delete 设备', 10, 'delete_device'), ('Can view 设备', 10, 'view_device'), ('Can add device model', 11, 'add_devicemodel'), ('Can change device model', 11, 'change_devicemodel'), ('Can delete device model', 11, 'delete_devicemodel'), ('Can view device model', 11, 'view_devicemodel'), ('Can add device type', 12, 'add_devicetype'), ('Can change device type', 12, 'change_devicetype'), ('Can delete device type', 12, 'delete_devicetype'), ('Can view device type', 12, 'view_devicetype'), ('Can add 机架', 13, 'add_rack'), ('Can change 机架', 13, 'change_rack'), ('Can delete 机架', 13, 'delete_rack'), ('Can view 机架', 13, 'view_rack'), ('Can add rack configuration', 14, 'add_rackconfiguration'), ('Can change rack configuration', 14, 'change_rackconfiguration'), ('Can delete rack configuration', 14, 'delete_rackconfiguration'), ('Can view rack configuration', 14, 'view_rackconfiguration') RETURNING "auth_permission"."id"; args=('Can add 设备', 10, 'add_device', 'Can change 设备', 10, 'change_device', 'Can delete 设备', 10, 'delete_device', 'Can view 设备', 10, 'view_device', 'Can add device model', 11, 'add_devicemodel', 'Can change device model', 11, 'change_devicemodel', 'Can delete device model', 11, 'delete_devicemodel', 'Can view device model', 11, 'view_devicemodel', 'Can add device type', 12, 'add_devicetype', 'Can change device type', 12, 'change_devicetype', 'Can delete device type', 12, 'delete_devicetype', 'Can view device type', 12, 'view_devicetype', 'Can add 机架', 13, 'add_rack', 'Can change 机架', 13, 'change_rack', 'Can delete 机架', 13, 'delete_rack', 'Can view 机架', 13, 'view_rack', 'Can add rack configuration', 14, 'add_rackconfiguration', 'Can change rack configuration', 14, 'change_rackconfiguration', 'Can delete rack configuration', 14, 'delete_rackconfiguration', 'Can view rack configuration', 14, 'view_rackconfiguration'); alias=default
+2024-12-08 16:13:04,512 - DEBUG - (0.000) COMMIT; args=None; alias=default
+2024-12-08 16:13:04,512 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'config_api'; args=('config_api',); alias=default
+2024-12-08 16:13:04,513 - INFO - Django management command completed
+2024-12-08 16:13:35,336 - INFO - "GET /api HTTP/1.1" 301 0
+2024-12-08 16:13:35,375 - INFO - "GET /api/ HTTP/1.1" 200 5526
+2024-12-08 16:13:35,450 - INFO - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+2024-12-08 16:13:35,462 - INFO - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+2024-12-08 16:13:35,469 - INFO - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2024-12-08 16:13:35,476 - INFO - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+2024-12-08 16:13:35,496 - INFO - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+2024-12-08 16:13:35,534 - INFO - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+2024-12-08 16:13:35,547 - INFO - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+2024-12-08 16:13:35,569 - INFO - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+2024-12-08 16:13:35,590 - INFO - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2024-12-08 16:13:35,596 - INFO - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2024-12-08 16:13:35,606 - INFO - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2024-12-08 16:13:35,607 - INFO - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+2024-12-08 16:13:35,664 - WARNING - Not Found: /favicon.ico
+2024-12-08 16:13:35,664 - WARNING - "GET /favicon.ico HTTP/1.1" 404 2222
+2024-12-08 16:13:41,676 - INFO - 正在获取构建历史...
+2024-12-08 16:13:41,678 - DEBUG - (0.000) SELECT COUNT(*) FROM (SELECT "config_api_build"."id" AS "col1" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6) subquery; args=(); alias=default
+2024-12-08 16:13:41,678 - INFO - 找到 2 条构建记录
+2024-12-08 16:13:41,687 - DEBUG - (0.000) SELECT "config_api_build"."id", "config_api_build"."upgrade_type", "config_api_build"."work_type", "config_api_build"."ne_ip", "config_api_build"."ne_ip_input", "config_api_build"."version_path", "config_api_build"."status", "config_api_build"."created_at", "config_api_build"."updated_at" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6; args=(); alias=default
+2024-12-08 16:13:41,692 - INFO - 序列化数据: [{'id': 3, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\R&D TN China\\R&D_Server\\Version Management\\Dev_Version\\TempVersion\\NPTI\\V9.4\\9.4.00179-develop', 'status': 'failed', 'created_at': '2024-12-05T11:57:35.793596Z', 'updated_at': '2024-12-05T11:57:36.499598Z'}, {'id': 2, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\path\\to\\version', 'status': 'stopped', 'created_at': '2024-12-04T10:50:39.628929Z', 'updated_at': '2024-12-05T11:57:42.377614Z'}]
+2024-12-08 16:13:41,771 - INFO - "GET /api/build/ HTTP/1.1" 200 11473
+2024-12-08 16:13:45,110 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-08 16:13:45,111 - INFO - 查询设备列表，总数：0
+2024-12-08 16:13:45,113 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-08 16:13:45,116 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-08 16:13:45,117 - INFO - 查询设备列表，总数：0
+2024-12-08 16:13:45,125 - INFO - "GET /api/devices/ HTTP/1.1" 200 11123
+2024-12-08 16:13:45,163 - INFO - "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+2024-12-08 16:13:49,262 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_rack"; args=(); alias=default
+2024-12-08 16:13:49,262 - INFO - 查询机架列表，总数：0
+2024-12-08 16:13:49,264 - DEBUG - (0.000) SELECT "config_api_rack"."id", "config_api_rack"."number", "config_api_rack"."row", "config_api_rack"."column", "config_api_rack"."total_units" FROM "config_api_rack" ORDER BY "config_api_rack"."row" ASC, "config_api_rack"."column" ASC; args=(); alias=default
+2024-12-08 16:13:49,270 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_rack"; args=(); alias=default
+2024-12-08 16:13:49,275 - INFO - 查询机架列表，总数：0
+2024-12-08 16:13:49,279 - INFO - "GET /api/racks/ HTTP/1.1" 200 9273

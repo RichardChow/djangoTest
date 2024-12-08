@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Config, Build, BuildLog
+from .models import Config, Build, BuildLog, Device, Rack
 import logging
 import json
 
@@ -98,3 +98,15 @@ class BuildSerializer(serializers.ModelSerializer):
         instance = super().create(validated_data)
         logger.info(f"构建记录创建成功: {instance.id}")
         return instance
+
+class DeviceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Device
+        fields = '__all__'
+
+class RackSerializer(serializers.ModelSerializer):
+    devices = DeviceSerializer(many=True, read_only=True)
+    
+    class Meta:
+        model = Rack
+        fields = '__all__'

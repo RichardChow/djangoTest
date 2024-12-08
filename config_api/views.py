@@ -1,12 +1,12 @@
 import logging
 import traceback
-from rest_framework import viewsets, status
-from rest_framework.decorators import action
+from rest_framework import viewsets, status, filters
+from rest_framework.decorators import action, api_view
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer, TemplateHTMLRenderer
-from .models import Config, Build, BuildLog
-from .serializers import ConfigSerializer, BuildSerializer, BuildLogSerializer
+from .models import Config, Build, BuildLog, Device, Rack, DeviceModel
+from .serializers import ConfigSerializer, BuildSerializer, BuildLogSerializer, DeviceSerializer, RackSerializer
 import sys
 import os
 from pathlib import Path
@@ -15,6 +15,8 @@ import threading
 from datetime import datetime
 from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
+from django.db import connection
+from rest_framework.views import APIView
 
 # 首先定义 logger
 logger = logging.getLogger('config_api')
@@ -198,6 +200,11 @@ def some_view(request):
     for config in configs:
         logger.info(f'Configuration: {config.id}')
     # Rest of the view...
+
+    with connection.cursor() as cursor:
+        cursor.execute('PRAGMA user_version;')
+        version = cursor.fetchone()[0]
+        logger.info(f"SQLite数据库版本: {version}")
 
 class BuildViewSet(viewsets.ModelViewSet):
     queryset = Build.objects.all()
@@ -462,3 +469,104 @@ class BuildViewSet(viewsets.ModelViewSet):
                 {'error': str(e)},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
+
+@api_view(['GET'])
+def check_database(request):
+    try:
+        # 检查数据库表
+        with connection.cursor() as cursor:
+            # 获取所有表名
+            cursor.execute("""
+                SELECT name FROM sqlite_master 
+                WHERE type='table' AND name NOT LIKE 'sqlite_%';
+            """)
+            tables = cursor.fetchall()
+            
+            # 获取每个表的记录数
+            table_info = {}
+            for (table_name,) in tables:
+                cursor.execute(f"SELECT COUNT(*) FROM {table_name};")
+                count = cursor.fetchone()[0]
+                table_info[table_name] = count
+            
+            logger.info(f"数据库表信息: {table_info}")
+            
+            return Response({
+                "tables": table_info,
+                "message": "数据库检查完成"
+            })
+            
+    except Exception as e:
+        logger.error(f"数据库检查失败: {str(e)}")
+        return Response({
+            "error": str(e)
+        }, status=500)
+
+class DeviceViewSet(viewsets.ModelViewSet):
+    queryset = Device.objects.all()
+    serializer_class = DeviceSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name', 'ip_address', 'device_type', 'rack_number']
+
+    def get_queryset(self):
+        queryset = Device.objects.all()
+        # 添加日志
+        logger.info(f"查询设备列表，总数：{queryset.count()}")
+        return queryset
+
+    @action(detail=True, methods=['GET'])
+    def model(self, request, pk=None):
+        """获取设备的3D模型数据"""
+        try:
+            device = self.get_object()
+            device_model = DeviceModel.objects.filter(device_type=device.device_type).first()
+            
+            if not device_model:
+                return Response({
+                    'error': '未找到设备的3D模型数据'
+                }, status=404)
+            
+            return Response({
+                'model_data': device_model.model_data
+            })
+        except Exception as e:
+            logger.error(f"获取设备3D模型失败: {str(e)}")
+            return Response({
+                'error': str(e)
+            }, status=500)
+
+class RackViewSet(viewsets.ModelViewSet):
+    queryset = Rack.objects.all()
+    serializer_class = RackSerializer
+
+    def get_queryset(self):
+        queryset = Rack.objects.all()
+        logger.info(f"查询机架列表，总数：{queryset.count()}")
+        return queryset
+
+class Build3DPreviewView(APIView):
+    def post(self, request):
+        try:
+            image = request.FILES.get('image')
+            if not image:
+                return Response({
+                    'success': False,
+                    'error': '未找到上传的图片'
+                })
+            
+            # 添加进度追踪
+            task = ProcessingTask.objects.create(status='processing')
+            
+            # 异步处理
+            model_data = self.generate_3d_model_async(image, task.id)
+            
+            return Response({
+                'success': True,
+                'task_id': task.id
+            })
+        except Exception as e:
+            logger.error(f"3D模型生成失败: {str(e)}")
+            return Response({
+                'success': False,
+                'error': str(e)
+            })

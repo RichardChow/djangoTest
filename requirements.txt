@@ -1,0 +1,5 @@
+Django==4.2.16
+djangorestframework>=3.14.0
+django-cors-headers>=4.3.0
+python-dotenv>=1.0.0
+# 请根据你项目中实际使用的其他依赖包添加 

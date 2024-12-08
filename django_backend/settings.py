@@ -14,6 +14,25 @@ from pathlib import Path
 import sys
 import io
 import os
+import logging
+import json
+
+# 在文件开头添加错误处理
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    import os
+    print("Warning: python-dotenv not found. Using os.environ directly.")
+    def load_dotenv():
+        pass
+
+# 加载 .env 文件
+load_dotenv()
+
+# 设置日志配置（移到最前面）
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,12 +42,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+5w&ag1w^fc0w(#77-ym*n%(srp2unz7o(+t9(pwsca7_2yxhs'
+SECRET_KEY = 'your-secret-key-here'  # 请使用一个安全的密钥
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.0.110']
 
 
 # Application definition
@@ -47,6 +66,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,13 +74,33 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 APPEND_SLASH = True
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+
+# 从环境变量获取允许的主机IP
+ALLOWED_HOST_IP = '192.168.0.110'
+logger.info(f"当前允许的主机IP: {ALLOWED_HOST_IP}")
+
+# 开发环境设置
+if DEBUG:
+    CORS_ALLOW_ALL_ORIGINS = True
+    ALLOWED_HOSTS = ['*']
+else:
+    CORS_ALLOW_ALL_ORIGINS = False
+    ALLOWED_HOSTS = ['localhost', '192.168.0.110']
+    
+# 统一的CORS配置
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # 假设你的前端运行在 3000 端口
+    "http://localhost:8082",
+    "http://localhost:8083",
+    f"http://{ALLOWED_HOST_IP}:8082",
+    f"http://{ALLOWED_HOST_IP}:8083",
+    f"ws://{ALLOWED_HOST_IP}:8082",
+    f"ws://{ALLOWED_HOST_IP}:8083",
+    "ws://localhost:8082",
+    "ws://localhost:8083"
 ]
 
 ROOT_URLCONF = 'django_backend.urls'
@@ -91,10 +131,26 @@ WSGI_APPLICATION = 'django_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',  # 直接指定sqlite3引擎
+        'NAME': BASE_DIR / 'db.sqlite3',  # 直接指定数据库文件名
     }
 }
+
+# 数据库配置检查
+try:
+    db_path = DATABASES['default']['NAME']
+    if os.path.exists(db_path):
+        logger.info(f"数据库文件存在于: {db_path}")
+        # 检查文件权限
+        logger.info(f"数据库文件权限: {oct(os.stat(db_path).st_mode)[-3:]}")
+        # 检查文件大小
+        logger.info(f"数据库文件大小: {os.path.getsize(db_path)} bytes")
+        # 检查文件所有者
+        logger.info(f"数据库文件所有者: {os.stat(db_path).st_uid}")
+    else:
+        logger.warning(f"数据库文件不存在: {db_path}")
+except Exception as e:
+    logger.error(f"数据库配置检查失败: {str(e)}")
 
 # 确保数据库文件有正确的权限
 
@@ -140,10 +196,15 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# 对于API请求，可以考虑禁用CSRF保护（仅用于开发环境）
+# 对于API请求，可考虑禁用CSRF保护（仅用于开发环境）
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = False
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8082']
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8082',
+    'http://localhost:8083',
+    f'http://{ALLOWED_HOST_IP}:8082',
+    f'http://{ALLOWED_HOST_IP}:8083'
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -159,35 +220,65 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format': '[{levelname}] {asctime} {module} {process:d} {thread:d} {message}',
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
             'style': '{',
         },
     },
     'handlers': {
-        'file': {
+        'file_backend': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': BASE_DIR / 'django_backend.log',
+            'filename': BASE_DIR / 'logs' / 'django_backend.log',
             'formatter': 'verbose',
-            'encoding': 'utf-8',
         },
-        'console': {
+        'file_management': {
             'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'logs' / 'django_management.log',
+            'formatter': 'verbose',
+        },
+        'file_debug': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'logs' / 'debug.log',
             'formatter': 'verbose',
         },
     },
     'loggers': {
-        'config_api': {
-            'handlers': ['file', 'console'],
+        'django': {
+            'handlers': ['file_backend'],
+            'level': os.getenv('LOG_LEVEL', 'INFO'),
+            'propagate': True,
+        },
+        'django.management': {
+            'handlers': ['file_management'],
+            'level': os.getenv('LOG_LEVEL', 'INFO'),
+            'propagate': True,
+        },
+        'debug': {
+            'handlers': ['file_debug'],
             'level': 'DEBUG',
             'propagate': True,
         },
-        'ssh_cli': {
-            'handlers': ['file', 'console'],
+        'django.request': {
+            'handlers': ['file_debug'],
             'level': 'DEBUG',
             'propagate': True,
         },
+        'django.server': {
+            'handlers': ['file_debug'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'django.db.backends': {
+            'handlers': ['file_debug'],
+            'level': 'DEBUG',
+            'propagate': True,
+        }
     },
 }
 
@@ -201,17 +292,6 @@ CHANNEL_LAYERS = {
     }
 }
 
-# 允许WebSocket的域名
-ALLOWED_HOSTS = ['*', '172.18.100.176', 'localhost']
-
-# WebSocket的CORS设置
-CORS_ALLOWED_ORIGINS = [
-    "http://172.18.100.176:8082",
-    "ws://172.18.100.176:8082",
-    "http://localhost:8082",
-    "ws://localhost:8082",
-]
-
 # 允许的HTTP方法
 CORS_ALLOW_METHODS = [
     'DELETE',
@@ -221,3 +301,11 @@ CORS_ALLOW_METHODS = [
     'POST',
     'PUT',
 ]
+
+# 修改日志文件路径的处理方式
+LOG_DIR = BASE_DIR / os.getenv('LOG_DIR', 'logs')
+# 确保日志目录存在
+LOG_DIR.mkdir(exist_ok=True)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
