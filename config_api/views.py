@@ -17,6 +17,9 @@ from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
 from django.db import connection
 from rest_framework.views import APIView
+from PIL import Image
+import numpy as np
+import cv2
 
 # 首先定义 logger
 logger = logging.getLogger('config_api')
@@ -547,26 +550,151 @@ class RackViewSet(viewsets.ModelViewSet):
 class Build3DPreviewView(APIView):
     def post(self, request):
         try:
+            logger.info("开始处理3D预览请求")
+            
+            # 1. 获取上传的图片
             image = request.FILES.get('image')
             if not image:
+                logger.error("未找到上传的图片")
                 return Response({
                     'success': False,
                     'error': '未找到上传的图片'
                 })
             
-            # 添加进度追踪
-            task = ProcessingTask.objects.create(status='processing')
+            logger.info(f"收到图片: {image.name}, 大小: {image.size} bytes")
             
-            # 异步处理
-            model_data = self.generate_3d_model_async(image, task.id)
+            # 2. 使用OpenCV处理图片
+            try:
+                image_array = np.frombuffer(image.read(), np.uint8)
+                img = cv2.imdecode(image_array, cv2.IMREAD_COLOR)
+                logger.info(f"图片尺寸: {img.shape}")
+            except Exception as e:
+                logger.error(f"图片处理失败: {str(e)}")
+                return Response({
+                    'success': False,
+                    'error': f'图片处理失败: {str(e)}'
+                })
+            
+            # 3. 分析图片获取设备尺寸和特征
+            try:
+                dimensions = self.analyze_image_dimensions(img)
+                features = self.detect_device_features(img)
+                logger.info(f"分析结果 - 尺寸: {dimensions}, 特征数量: {len(features['ports']) + len(features['leds'])}")
+            except Exception as e:
+                logger.error(f"图片分析失败: {str(e)}")
+                return Response({
+                    'success': False,
+                    'error': f'图片分析失败: {str(e)}'
+                })
+            
+            # 4. 创建3D模型数据
+            model_data = {
+                'dimensions': dimensions,
+                'features': features,
+                'width': dimensions['width'],
+                'height': dimensions['height'],
+                'depth': dimensions['depth'],
+                'ports': features.get('ports', []),
+                'leds': features.get('leds', []),
+                'displays': features.get('displays', [])
+            }
+            
+            logger.info("3D模型数据生成成功")
+            
+            # 5. 保存到数据库
+            try:
+                device_model = DeviceModel.objects.create(
+                    image=image,
+                    model_data=model_data
+                )
+                logger.info(f"模型保存成功，ID: {device_model.id}")
+            except Exception as e:
+                logger.error(f"模型保存失败: {str(e)}")
+                # 继续返回模型数据，即使保存失败
             
             return Response({
                 'success': True,
-                'task_id': task.id
+                'model': model_data
             })
+            
         except Exception as e:
             logger.error(f"3D模型生成失败: {str(e)}")
+            logger.error(traceback.format_exc())
             return Response({
                 'success': False,
                 'error': str(e)
             })
+
+    def analyze_image_dimensions(self, img):
+        """分析图片中设备的尺寸"""
+        height, width = img.shape[:2]
+        
+        # 使用边缘检测找到设备轮廓
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        edges = cv2.Canny(gray, 50, 150)
+        contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        
+        if contours:
+            # 获取最大轮廓（假设是设备主体）
+            main_contour = max(contours, key=cv2.contourArea)
+            x, y, w, h = cv2.boundingRect(main_contour)
+            
+            # 估算深度（可以根据实际需求调整）
+            estimated_depth = w * 0.3
+            
+            return {
+                'width': w,
+                'height': h,
+                'depth': estimated_depth
+            }
+        
+        return {
+            'width': width,
+            'height': height,
+            'depth': min(width, height) * 0.3
+        }
+
+    def detect_device_features(self, img):
+        """检测设备特征（端口、LED等）"""
+        features = {
+            'ports': [],
+            'leds': [],
+            'displays': []
+        }
+        
+        # 转换为灰度图
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        
+        # 检测圆形（可能是端口或LED）
+        circles = cv2.HoughCircles(
+            gray,
+            cv2.HOUGH_GRADIENT,
+            dp=1,
+            minDist=20,
+            param1=50,
+            param2=30,
+            minRadius=5,
+            maxRadius=30
+        )
+        
+        if circles is not None:
+            circles = np.uint16(np.around(circles))
+            for i in circles[0, :]:
+                x, y, r = i[0], i[1], i[2]
+                
+                # 获取该位置的颜色
+                color = img[y, x]
+                
+                # 根据大小和颜色判断是端口还是LED
+                if r > 15:
+                    features['ports'].append({
+                        'position': {'x': x, 'y': y},
+                        'radius': r
+                    })
+                else:
+                    features['leds'].append({
+                        'position': {'x': x, 'y': y},
+                        'color': color.tolist()
+                    })
+        
+        return features

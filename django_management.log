@@ -454,3 +454,203 @@ django.db.utils.OperationalError: no such table: config_api_device
 2024-12-08 16:13:49,270 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_rack"; args=(); alias=default
 2024-12-08 16:13:49,275 - INFO - 查询机架列表，总数：0
 2024-12-08 16:13:49,279 - INFO - "GET /api/racks/ HTTP/1.1" 200 9273
+2024-12-08 20:16:24,288 - INFO - ==================================================
+2024-12-08 20:22:17,806 - INFO - B:\pzhou_worksapce\djangoTest\config_api\models.py changed, reloading.
+2024-12-08 23:15:34,406 - INFO - Django management command completed
+2024-12-08 23:15:36,135 - INFO - Starting Django management command
+2024-12-08 23:15:36,151 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 23:15:36,152 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 23:15:36,153 - INFO - 数据库文件权限: 666
+2024-12-08 23:15:36,153 - INFO - 数据库文件大小: 184320 bytes
+2024-12-08 23:15:36,154 - INFO - 数据库文件所有者: 0
+2024-12-08 23:15:36,788 - INFO - Starting Django management command
+2024-12-08 23:15:36,797 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 23:15:36,797 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 23:15:36,798 - INFO - 数据库文件权限: 666
+2024-12-08 23:15:36,798 - INFO - 数据库文件大小: 184320 bytes
+2024-12-08 23:15:36,803 - INFO - 数据库文件所有者: 0
+2024-12-08 23:15:36,959 - INFO - Watching for file changes with StatReloader
+2024-12-08 23:16:10,045 - INFO - B:\pzhou_worksapce\djangoTest\config_api\models.py changed, reloading.
+2024-12-08 23:16:10,266 - INFO - Starting Django management command
+2024-12-08 23:16:10,274 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 23:16:10,275 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 23:16:10,282 - INFO - 数据库文件权限: 666
+2024-12-08 23:16:10,282 - INFO - 数据库文件大小: 184320 bytes
+2024-12-08 23:16:10,283 - INFO - 数据库文件所有者: 0
+2024-12-08 23:16:10,500 - INFO - Watching for file changes with StatReloader
+2024-12-08 23:16:12,049 - INFO - Views module loaded
+2024-12-08 23:16:12,049 - INFO - Logger test from views.py
+2024-12-08 23:16:12,051 - ERROR - Logger error test from views.py
+2024-12-08 23:16:13,055 - INFO - Successfully imported ssh_cli
+2024-12-08 23:16:13,202 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 23:16:13,207 - DEBUG - (0.015) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 23:16:25,076 - INFO - Starting Django management command
+2024-12-08 23:16:25,082 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 23:16:25,083 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 23:16:25,084 - INFO - 数据库文件权限: 666
+2024-12-08 23:16:25,084 - INFO - 数据库文件大小: 184320 bytes
+2024-12-08 23:16:25,085 - INFO - 数据库文件所有者: 0
+2024-12-08 23:16:25,386 - INFO - Views module loaded
+2024-12-08 23:16:25,386 - INFO - Logger test from views.py
+2024-12-08 23:16:25,387 - ERROR - Logger error test from views.py
+2024-12-08 23:16:25,663 - INFO - Successfully imported ssh_cli
+2024-12-08 23:16:25,714 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 23:16:25,716 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 23:16:25,733 - INFO - Django management command completed
+2024-12-08 23:16:30,220 - INFO - Starting Django management command
+2024-12-08 23:16:30,227 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 23:16:30,227 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 23:16:30,227 - INFO - 数据库文件权限: 666
+2024-12-08 23:16:30,228 - INFO - 数据库文件大小: 184320 bytes
+2024-12-08 23:16:30,228 - INFO - 数据库文件所有者: 0
+2024-12-08 23:16:30,408 - DEBUG - (0.000) BEGIN; args=None; alias=default
+2024-12-08 23:16:30,408 - DEBUG - (0.000) SELECT JSON('{"a": "b"}'); args=None; alias=default
+2024-12-08 23:16:30,409 - DEBUG - (0.000) COMMIT; args=None; alias=default
+2024-12-08 23:16:30,549 - INFO - Views module loaded
+2024-12-08 23:16:30,549 - INFO - Logger test from views.py
+2024-12-08 23:16:30,550 - ERROR - Logger error test from views.py
+2024-12-08 23:16:30,824 - INFO - Successfully imported ssh_cli
+2024-12-08 23:16:30,882 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 23:16:30,884 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 23:16:30,884 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 23:16:30,885 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 23:16:30,892 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 23:16:30,893 - DEBUG - (0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+2024-12-08 23:16:30,893 - DEBUG - (0.000) PRAGMA foreign_keys; args=None; alias=default
+2024-12-08 23:16:30,893 - DEBUG - (0.000) BEGIN; args=None; alias=default
+2024-12-08 23:16:30,894 - DEBUG - ALTER TABLE "config_api_devicetype" DROP COLUMN "model_config"; (params ())
+2024-12-08 23:16:30,896 - DEBUG - (0.000) ALTER TABLE "config_api_devicetype" DROP COLUMN "model_config"; args=(); alias=default
+2024-12-08 23:16:30,898 - DEBUG - CREATE TABLE "new__config_api_devicetype" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "type_id" varchar(50) NOT NULL UNIQUE, "name" varchar(100) NOT NULL, "model_data" text NOT NULL CHECK ((JSON_VALID("model_data") OR "model_data" IS NULL))); (params None)
+2024-12-08 23:16:30,898 - DEBUG - (0.000) CREATE TABLE "new__config_api_devicetype" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "type_id" varchar(50) NOT NULL UNIQUE, "name" varchar(100) NOT NULL, "model_data" text NOT NULL CHECK ((JSON_VALID("model_data") OR "model_data" IS NULL))); args=None; alias=default
+2024-12-08 23:16:30,898 - DEBUG - INSERT INTO "new__config_api_devicetype" ("id", "type_id", "name", "model_data") SELECT "id", "type_id", "name", '{}' FROM "config_api_devicetype"; (params ())
+2024-12-08 23:16:30,899 - DEBUG - (0.000) INSERT INTO "new__config_api_devicetype" ("id", "type_id", "name", "model_data") SELECT "id", "type_id", "name", '{}' FROM "config_api_devicetype"; args=(); alias=default
+2024-12-08 23:16:30,899 - DEBUG - DROP TABLE "config_api_devicetype"; (params ())
+2024-12-08 23:16:30,899 - DEBUG - (0.000) DROP TABLE "config_api_devicetype"; args=(); alias=default
+2024-12-08 23:16:30,899 - DEBUG - ALTER TABLE "new__config_api_devicetype" RENAME TO "config_api_devicetype"; (params ())
+2024-12-08 23:16:30,900 - DEBUG - (0.000) ALTER TABLE "new__config_api_devicetype" RENAME TO "config_api_devicetype"; args=(); alias=default
+2024-12-08 23:16:30,903 - DEBUG - CREATE TABLE "new__config_api_device" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "ip_address" varchar(15) NOT NULL, "rack_number" varchar(50) NOT NULL, "position" integer NOT NULL, "status" varchar(20) NOT NULL, "last_updated" datetime NOT NULL, "device_type_id" bigint NOT NULL REFERENCES "config_api_devicetype" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+2024-12-08 23:16:30,903 - DEBUG - (0.000) CREATE TABLE "new__config_api_device" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "ip_address" varchar(15) NOT NULL, "rack_number" varchar(50) NOT NULL, "position" integer NOT NULL, "status" varchar(20) NOT NULL, "last_updated" datetime NOT NULL, "device_type_id" bigint NOT NULL REFERENCES "config_api_devicetype" ("id") DEFERRABLE INITIALLY DEFERRED); args=None; alias=default
+2024-12-08 23:16:30,903 - DEBUG - INSERT INTO "new__config_api_device" ("id", "name", "ip_address", "rack_number", "position", "status", "last_updated", "device_type_id") SELECT "id", "name", "ip_address", "rack_number", "position", "status", "last_updated", "device_type" FROM "config_api_device"; (params ())
+2024-12-08 23:16:30,904 - DEBUG - (0.000) INSERT INTO "new__config_api_device" ("id", "name", "ip_address", "rack_number", "position", "status", "last_updated", "device_type_id") SELECT "id", "name", "ip_address", "rack_number", "position", "status", "last_updated", "device_type" FROM "config_api_device"; args=(); alias=default
+2024-12-08 23:16:30,904 - DEBUG - DROP TABLE "config_api_device"; (params ())
+2024-12-08 23:16:30,904 - DEBUG - (0.000) DROP TABLE "config_api_device"; args=(); alias=default
+2024-12-08 23:16:30,904 - DEBUG - ALTER TABLE "new__config_api_device" RENAME TO "config_api_device"; (params ())
+2024-12-08 23:16:30,906 - DEBUG - (0.000) ALTER TABLE "new__config_api_device" RENAME TO "config_api_device"; args=(); alias=default
+2024-12-08 23:16:30,907 - DEBUG - CREATE INDEX "config_api_device_device_type_id_a24a8b07" ON "config_api_device" ("device_type_id"); (params ())
+2024-12-08 23:16:30,907 - DEBUG - (0.000) CREATE INDEX "config_api_device_device_type_id_a24a8b07" ON "config_api_device" ("device_type_id"); args=(); alias=default
+2024-12-08 23:16:30,907 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 23:16:30,908 - DEBUG - (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('config_api', '0003_remove_devicetype_model_config_devicetype_model_data_and_more', '2024-12-08 15:16:30.907015') RETURNING "django_migrations"."id"; args=('config_api', '0003_remove_devicetype_model_config_devicetype_model_data_and_more', '2024-12-08 15:16:30.907015'); alias=default
+2024-12-08 23:16:30,908 - DEBUG - (0.000) PRAGMA foreign_key_check; args=None; alias=default
+2024-12-08 23:16:30,912 - DEBUG - (0.015) COMMIT; args=None; alias=default
+2024-12-08 23:16:30,913 - DEBUG - (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+2024-12-08 23:16:30,913 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 23:16:30,914 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 23:16:30,920 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2024-12-08 23:16:30,921 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+2024-12-08 23:16:30,923 - DEBUG - (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+2024-12-08 23:16:30,923 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+2024-12-08 23:16:30,924 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2024-12-08 23:16:30,924 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+2024-12-08 23:16:30,925 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+2024-12-08 23:16:30,926 - DEBUG - (0.016) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+2024-12-08 23:16:30,927 - DEBUG - (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default
+2024-12-08 23:16:30,927 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+2024-12-08 23:16:30,928 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2024-12-08 23:16:30,928 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+2024-12-08 23:16:30,929 - DEBUG - (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default
+2024-12-08 23:16:30,930 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+2024-12-08 23:16:30,930 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2024-12-08 23:16:30,931 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+2024-12-08 23:16:30,932 - DEBUG - (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default
+2024-12-08 23:16:30,932 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+2024-12-08 23:16:30,933 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'config_api'; args=('config_api',); alias=default
+2024-12-08 23:16:30,933 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'build') LIMIT 21; args=('config_api', 'build'); alias=default
+2024-12-08 23:16:30,934 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'config') LIMIT 21; args=('config_api', 'config'); alias=default
+2024-12-08 23:16:30,934 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'buildlog') LIMIT 21; args=('config_api', 'buildlog'); alias=default
+2024-12-08 23:16:30,935 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'device') LIMIT 21; args=('config_api', 'device'); alias=default
+2024-12-08 23:16:30,936 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'devicemodel') LIMIT 21; args=('config_api', 'devicemodel'); alias=default
+2024-12-08 23:16:30,937 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'devicetype') LIMIT 21; args=('config_api', 'devicetype'); alias=default
+2024-12-08 23:16:30,938 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'rack') LIMIT 21; args=('config_api', 'rack'); alias=default
+2024-12-08 23:16:30,938 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'config_api' AND "django_content_type"."model" = 'rackconfiguration') LIMIT 21; args=('config_api', 'rackconfiguration'); alias=default
+2024-12-08 23:16:30,939 - DEBUG - (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 11, 12, 13, 14) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 11, 12, 13, 14); alias=default
+2024-12-08 23:16:30,940 - DEBUG - (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'config_api'; args=('config_api',); alias=default
+2024-12-08 23:16:30,940 - INFO - Django management command completed
+2024-12-08 23:18:30,520 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-08 23:18:30,521 - INFO - 查询设备列表，总数：0
+2024-12-08 23:18:30,524 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-08 23:18:30,531 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-08 23:19:07,977 - INFO - B:\pzhou_worksapce\djangoTest\django_backend\settings.py changed, reloading.
+2024-12-08 23:19:08,242 - INFO - Starting Django management command
+2024-12-08 23:19:08,254 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 23:19:08,254 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 23:19:08,255 - INFO - 数据库文件权限: 666
+2024-12-08 23:19:08,256 - INFO - 数据库文件大小: 192512 bytes
+2024-12-08 23:19:08,257 - INFO - 数据库文件所有者: 0
+2024-12-08 23:19:08,429 - INFO - Watching for file changes with StatReloader
+2024-12-08 23:19:08,567 - INFO - Views module loaded
+2024-12-08 23:19:08,567 - INFO - Logger test from views.py
+2024-12-08 23:19:08,569 - ERROR - Logger error test from views.py
+2024-12-08 23:19:08,856 - INFO - Successfully imported ssh_cli
+2024-12-08 23:19:08,926 - DEBUG - (0.016) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 23:19:08,928 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 23:19:49,196 - INFO - B:\pzhou_worksapce\djangoTest\config_api\urls.py changed, reloading.
+2024-12-08 23:19:49,455 - INFO - Starting Django management command
+2024-12-08 23:19:49,465 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-08 23:19:49,465 - INFO - 数据库文件存在于: B:\pzhou_worksapce\djangoTest\db.sqlite3
+2024-12-08 23:19:49,465 - INFO - 数据库文件权限: 666
+2024-12-08 23:19:49,466 - INFO - 数据库文件大小: 192512 bytes
+2024-12-08 23:19:49,467 - INFO - 数据库文件所有者: 0
+2024-12-08 23:19:49,636 - INFO - Watching for file changes with StatReloader
+2024-12-08 23:19:49,779 - INFO - Views module loaded
+2024-12-08 23:19:49,779 - INFO - Logger test from views.py
+2024-12-08 23:19:49,782 - ERROR - Logger error test from views.py
+2024-12-08 23:19:50,057 - INFO - Successfully imported ssh_cli
+2024-12-08 23:19:50,125 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-08 23:19:50,129 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-08 23:19:55,211 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-08 23:19:55,212 - INFO - 查询设备列表，总数：0
+2024-12-08 23:19:55,216 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-08 23:19:55,217 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-08 23:19:59,770 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-08 23:19:59,771 - INFO - 查询设备列表，总数：0
+2024-12-08 23:19:59,774 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-08 23:19:59,781 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-08 23:20:01,033 - INFO - 正在获取构建历史...
+2024-12-08 23:20:01,036 - DEBUG - (0.000) SELECT COUNT(*) FROM (SELECT "config_api_build"."id" AS "col1" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6) subquery; args=(); alias=default
+2024-12-08 23:20:01,037 - INFO - 找到 2 条构建记录
+2024-12-08 23:20:01,046 - DEBUG - (0.000) SELECT "config_api_build"."id", "config_api_build"."upgrade_type", "config_api_build"."work_type", "config_api_build"."ne_ip", "config_api_build"."ne_ip_input", "config_api_build"."version_path", "config_api_build"."status", "config_api_build"."created_at", "config_api_build"."updated_at" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6; args=(); alias=default
+2024-12-08 23:20:01,057 - INFO - 序列化数据: [{'id': 3, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\R&D TN China\\R&D_Server\\Version Management\\Dev_Version\\TempVersion\\NPTI\\V9.4\\9.4.00179-develop', 'status': 'failed', 'created_at': '2024-12-05T11:57:35.793596Z', 'updated_at': '2024-12-05T11:57:36.499598Z'}, {'id': 2, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\path\\to\\version', 'status': 'stopped', 'created_at': '2024-12-04T10:50:39.628929Z', 'updated_at': '2024-12-05T11:57:42.377614Z'}]
+2024-12-08 23:20:01,057 - INFO - "GET /api/build/ HTTP/1.1" 200 602
+2024-12-08 23:20:01,070 - WARNING - Not Found: /api/config/
+2024-12-08 23:20:01,071 - WARNING - "GET /api/config/ HTTP/1.1" 404 7954
+2024-12-08 23:20:12,635 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-08 23:20:12,636 - INFO - 查询设备列表，总数：0
+2024-12-08 23:20:12,639 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-08 23:20:12,657 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2

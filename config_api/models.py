@@ -86,6 +86,15 @@ class BuildLog(models.Model):
     def __str__(self):
         return f"{self.timestamp} - {self.log_type}: {self.message[:50]}"
 
+class DeviceType(models.Model):
+    """设备类型模型"""
+    type_id = models.CharField(max_length=50, unique=True)
+    name = models.CharField(max_length=100)
+    model_data = models.JSONField(default=dict)  # 存储3D模型数据
+
+    def __str__(self):
+        return f"{self.name} ({self.type_id})"
+
 class Device(models.Model):
     """设备模型"""
     name = models.CharField(max_length=100, verbose_name='设备名称')
@@ -106,6 +115,9 @@ class Device(models.Model):
         verbose_name_plural = '设备列表'
         ordering = ['rack_number', 'position']
 
+    def __str__(self):
+        return f"{self.name} - {self.device_type.name}"
+
 class Rack(models.Model):
     """机架模型"""
     number = models.CharField(max_length=50, unique=True, verbose_name='机架编号')
@@ -117,12 +129,6 @@ class Rack(models.Model):
         verbose_name = '机架'
         verbose_name_plural = '机架列表'
         ordering = ['row', 'column']
-
-class DeviceType(models.Model):
-    """设备类型模型"""
-    type_id = models.CharField(max_length=50, unique=True)
-    name = models.CharField(max_length=100)
-    model_data = models.JSONField(default=dict)  # 存储3D模型数据
 
 class RackConfiguration(models.Model):
     """机架配置模型"""

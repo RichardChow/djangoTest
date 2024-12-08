@@ -302,6 +302,18 @@ CORS_ALLOW_METHODS = [
     'PUT',
 ]
 
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
 # 修改日志文件路径的处理方式
 LOG_DIR = BASE_DIR / os.getenv('LOG_DIR', 'logs')
 # 确保日志目录存在
