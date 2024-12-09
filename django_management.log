@@ -654,3 +654,75 @@ django.db.utils.OperationalError: no such table: config_api_device
 2024-12-08 23:20:12,636 - INFO - 查询设备列表，总数：0
 2024-12-08 23:20:12,639 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
 2024-12-08 23:20:12,657 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 14:24:02,097 - INFO - Starting Django management command
+2024-12-09 14:24:02,104 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-09 14:24:02,104 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-09 14:24:02,104 - INFO - 数据库文件权限: 666
+2024-12-09 14:24:02,104 - INFO - 数据库文件大小: 192512 bytes
+2024-12-09 14:24:02,105 - INFO - 数据库文件所有者: 0
+2024-12-09 14:24:02,991 - INFO - Starting Django management command
+2024-12-09 14:24:02,994 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-09 14:24:02,994 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-09 14:24:02,995 - INFO - 数据库文件权限: 666
+2024-12-09 14:24:02,995 - INFO - 数据库文件大小: 192512 bytes
+2024-12-09 14:24:02,995 - INFO - 数据库文件所有者: 0
+2024-12-09 14:24:03,485 - INFO - Watching for file changes with StatReloader
+2024-12-09 14:27:07,339 - INFO - Django management command completed
+2024-12-09 14:27:07,392 - INFO - Django management command completed
+2024-12-09 14:27:08,614 - INFO - Starting Django management command
+2024-12-09 14:27:08,619 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-09 14:27:08,620 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-09 14:27:08,622 - INFO - 数据库文件权限: 666
+2024-12-09 14:27:08,622 - INFO - 数据库文件大小: 192512 bytes
+2024-12-09 14:27:08,623 - INFO - 数据库文件所有者: 0
+2024-12-09 14:27:09,335 - INFO - Starting Django management command
+2024-12-09 14:27:09,338 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-09 14:27:09,340 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-09 14:27:09,340 - INFO - 数据库文件权限: 666
+2024-12-09 14:27:09,341 - INFO - 数据库文件大小: 192512 bytes
+2024-12-09 14:27:09,341 - INFO - 数据库文件所有者: 0
+2024-12-09 14:27:09,817 - INFO - Watching for file changes with StatReloader
+2024-12-09 14:27:10,195 - INFO - Views module loaded
+2024-12-09 14:27:10,195 - INFO - Logger test from views.py
+2024-12-09 14:27:10,196 - ERROR - Logger error test from views.py
+2024-12-09 14:27:10,951 - INFO - Successfully imported ssh_cli
+2024-12-09 14:27:11,040 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-09 14:27:11,044 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-09 14:27:28,791 - INFO - 正在获取构建历史...
+2024-12-09 14:27:28,796 - DEBUG - (0.000) SELECT COUNT(*) FROM (SELECT "config_api_build"."id" AS "col1" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6) subquery; args=(); alias=default
+2024-12-09 14:27:28,797 - INFO - 找到 2 条构建记录
+2024-12-09 14:27:28,798 - DEBUG - (0.000) SELECT "config_api_build"."id", "config_api_build"."upgrade_type", "config_api_build"."work_type", "config_api_build"."ne_ip", "config_api_build"."ne_ip_input", "config_api_build"."version_path", "config_api_build"."status", "config_api_build"."created_at", "config_api_build"."updated_at" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6; args=(); alias=default
+2024-12-09 14:27:28,803 - INFO - 序列化数据: [{'id': 3, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\R&D TN China\\R&D_Server\\Version Management\\Dev_Version\\TempVersion\\NPTI\\V9.4\\9.4.00179-develop', 'status': 'failed', 'created_at': '2024-12-05T11:57:35.793596Z', 'updated_at': '2024-12-05T11:57:36.499598Z'}, {'id': 2, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\path\\to\\version', 'status': 'stopped', 'created_at': '2024-12-04T10:50:39.628929Z', 'updated_at': '2024-12-05T11:57:42.377614Z'}]
+2024-12-09 14:27:28,806 - INFO - "GET /api/build/ HTTP/1.1" 200 602
+2024-12-09 14:27:28,815 - WARNING - Not Found: /api/config/
+2024-12-09 14:27:28,816 - WARNING - "GET /api/config/ HTTP/1.1" 404 7950
+2024-12-09 14:27:31,090 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 14:27:31,091 - INFO - 查询设备列表，总数：0
+2024-12-09 14:27:31,093 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 14:27:31,094 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 14:27:35,910 - WARNING - Not Found: /api/api/devices/
+2024-12-09 14:27:35,911 - WARNING - "GET /api/api/devices/ HTTP/1.1" 404 7965
+2024-12-09 14:27:40,688 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 14:27:40,689 - INFO - 查询设备列表，总数：0
+2024-12-09 14:27:40,692 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 14:27:40,693 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 14:27:56,402 - INFO - "GET /api/ HTTP/1.1" 200 10442
+2024-12-09 16:45:42,594 - INFO - 正在获取构建历史...
+2024-12-09 16:45:42,606 - DEBUG - (0.000) SELECT COUNT(*) FROM (SELECT "config_api_build"."id" AS "col1" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6) subquery; args=(); alias=default
+2024-12-09 16:45:42,607 - INFO - 找到 2 条构建记录
+2024-12-09 16:45:42,608 - DEBUG - (0.000) SELECT "config_api_build"."id", "config_api_build"."upgrade_type", "config_api_build"."work_type", "config_api_build"."ne_ip", "config_api_build"."ne_ip_input", "config_api_build"."version_path", "config_api_build"."status", "config_api_build"."created_at", "config_api_build"."updated_at" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6; args=(); alias=default
+2024-12-09 16:45:42,611 - INFO - 序列化数据: [{'id': 3, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\R&D TN China\\R&D_Server\\Version Management\\Dev_Version\\TempVersion\\NPTI\\V9.4\\9.4.00179-develop', 'status': 'failed', 'created_at': '2024-12-05T11:57:35.793596Z', 'updated_at': '2024-12-05T11:57:36.499598Z'}, {'id': 2, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\path\\to\\version', 'status': 'stopped', 'created_at': '2024-12-04T10:50:39.628929Z', 'updated_at': '2024-12-05T11:57:42.377614Z'}]
+2024-12-09 16:45:42,612 - INFO - "GET /api/build/ HTTP/1.1" 200 602
+2024-12-09 16:45:42,615 - WARNING - Not Found: /api/config/
+2024-12-09 16:45:42,616 - WARNING - "GET /api/config/ HTTP/1.1" 404 7950
+2024-12-09 16:45:45,117 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 16:45:45,117 - INFO - 查询设备列表，总数：0
+2024-12-09 16:45:45,118 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 16:45:45,119 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 16:45:51,915 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 16:45:51,915 - INFO - 查询设备列表，总数：0
+2024-12-09 16:45:51,917 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 16:45:51,918 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2

@@ -16,3 +16,9 @@ db.sqlite3
 # 虚拟环境
 venv/
 env/ 
+config_api/__pycache__/__init__.cpython-38.pyc
+config_api/__pycache__/__init__.cpython-38.pyc
+config_api/__pycache__/__init__.cpython-38.pyc
+/config_api/__pycache__
+*.pyc
+django_management.log
