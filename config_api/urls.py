@@ -17,6 +17,8 @@ def handler404(request, exception):
 urlpatterns = [
     path('', include(router.urls)),
     path('build/', Build3DPreviewView.as_view(), name='build-3d-preview'),
+    path('device/generate3d/', DeviceViewSet.as_view({'post': 'generate_3d_model'}), name='generate_3d_model'),
+    path('device-types/', DeviceViewSet.as_view({'post': 'create_device_type'}), name='device_types'),
 ]
 
 # 添加错误处理

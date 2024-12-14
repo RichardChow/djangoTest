@@ -726,3 +726,406 @@ django.db.utils.OperationalError: no such table: config_api_device
 2024-12-09 16:45:51,915 - INFO - 查询设备列表，总数：0
 2024-12-09 16:45:51,917 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
 2024-12-09 16:45:51,918 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 17:24:20,722 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 17:24:20,723 - INFO - 查询设备列表，总数：0
+2024-12-09 17:24:20,726 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 17:24:20,728 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 17:24:26,847 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 17:24:26,848 - INFO - 查询设备列表，总数：0
+2024-12-09 17:24:26,852 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 17:24:26,853 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 17:24:57,463 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 17:24:57,463 - INFO - 查询设备列表，总数：0
+2024-12-09 17:24:57,465 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 17:24:57,467 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 17:25:07,944 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 17:25:07,944 - INFO - 查询设备列表，总数：0
+2024-12-09 17:25:07,947 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 17:25:07,948 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 17:25:14,563 - INFO - 正在获取构建历史...
+2024-12-09 17:25:14,568 - DEBUG - (0.000) SELECT COUNT(*) FROM (SELECT "config_api_build"."id" AS "col1" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6) subquery; args=(); alias=default
+2024-12-09 17:25:14,568 - INFO - 找到 2 条构建记录
+2024-12-09 17:25:14,569 - DEBUG - (0.000) SELECT "config_api_build"."id", "config_api_build"."upgrade_type", "config_api_build"."work_type", "config_api_build"."ne_ip", "config_api_build"."ne_ip_input", "config_api_build"."version_path", "config_api_build"."status", "config_api_build"."created_at", "config_api_build"."updated_at" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6; args=(); alias=default
+2024-12-09 17:25:14,572 - INFO - 序列化数据: [{'id': 3, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\R&D TN China\\R&D_Server\\Version Management\\Dev_Version\\TempVersion\\NPTI\\V9.4\\9.4.00179-develop', 'status': 'failed', 'created_at': '2024-12-05T11:57:35.793596Z', 'updated_at': '2024-12-05T11:57:36.499598Z'}, {'id': 2, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\path\\to\\version', 'status': 'stopped', 'created_at': '2024-12-04T10:50:39.628929Z', 'updated_at': '2024-12-05T11:57:42.377614Z'}]
+2024-12-09 17:25:14,575 - WARNING - Not Found: /api/config/
+2024-12-09 17:25:14,575 - INFO - "GET /api/build/ HTTP/1.1" 200 602
+2024-12-09 17:25:14,576 - WARNING - "GET /api/config/ HTTP/1.1" 404 7950
+2024-12-09 18:22:28,149 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 18:22:28,150 - INFO - 查询设备列表，总数：0
+2024-12-09 18:22:28,152 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 18:22:28,155 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 18:22:36,994 - WARNING - Not Found: /api/api/devices/
+2024-12-09 18:22:36,995 - WARNING - "GET /api/api/devices/ HTTP/1.1" 404 7965
+2024-12-09 18:25:31,496 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 18:25:31,497 - INFO - 查询设备列表，总数：0
+2024-12-09 18:25:31,501 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 18:25:31,502 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 18:25:33,948 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 18:25:33,949 - INFO - 查询设备列表，总数：0
+2024-12-09 18:25:33,953 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 18:25:33,955 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 18:29:58,977 - WARNING - Not Found: /api/api/devices/
+2024-12-09 18:29:58,977 - WARNING - "GET /api/api/devices/ HTTP/1.1" 404 7965
+2024-12-09 18:33:32,954 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-09 18:33:32,954 - INFO - 查询设备列表，总数：0
+2024-12-09 18:33:32,956 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-09 18:33:32,957 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-09 18:33:35,021 - WARNING - Not Found: /api/api/devices/
+2024-12-09 18:33:35,022 - WARNING - "GET /api/api/devices/ HTTP/1.1" 404 7965
+2024-12-10 10:28:33,614 - WARNING - Not Found: /api/api/devices/
+2024-12-10 10:28:33,615 - WARNING - "GET /api/api/devices/ HTTP/1.1" 404 7965
+2024-12-10 10:28:33,852 - WARNING - Not Found: /api/api/devices/
+2024-12-10 10:28:33,853 - WARNING - "GET /api/api/devices/ HTTP/1.1" 404 7965
+2024-12-10 10:32:18,202 - WARNING - Not Found: /api/api/devices/
+2024-12-10 10:32:18,202 - WARNING - "GET /api/api/devices/ HTTP/1.1" 404 7965
+2024-12-10 10:32:18,437 - WARNING - Not Found: /api/api/devices/
+2024-12-10 10:32:18,438 - WARNING - "GET /api/api/devices/ HTTP/1.1" 404 7965
+2024-12-10 10:55:18,566 - WARNING - Not Found: /api/api/devices/
+2024-12-10 10:55:18,567 - WARNING - "GET /api/api/devices/ HTTP/1.1" 404 7965
+2024-12-10 15:00:28,340 - WARNING - Not Found: /api/api/device/generate3d/
+2024-12-10 15:00:28,342 - WARNING - "POST /api/api/device/generate3d/ HTTP/1.1" 404 7996
+2024-12-10 15:03:10,070 - WARNING - Not Found: /api/api/device/generate3d/
+2024-12-10 15:03:10,071 - WARNING - "POST /api/api/device/generate3d/ HTTP/1.1" 404 7996
+2024-12-10 15:11:28,710 - WARNING - Not Found: /api/device/generate3d
+2024-12-10 15:11:28,711 - WARNING - "POST /api/device/generate3d HTTP/1.1" 404 7981
+2024-12-10 15:39:30,271 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-10 15:39:30,272 - INFO - 查询设备列表，总数：0
+2024-12-10 15:39:30,282 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-10 15:39:30,295 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-10 15:39:33,465 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-10 15:39:33,466 - INFO - 查询设备列表，总数：0
+2024-12-10 15:39:33,467 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-10 15:39:33,469 - INFO - "GET /api/devices/?search= HTTP/1.1" 200 2
+2024-12-10 16:26:36,654 - WARNING - Not Found: /api/api/device/generate3d
+2024-12-10 16:26:36,655 - WARNING - "POST /api/api/device/generate3d HTTP/1.1" 404 7993
+2024-12-10 16:27:24,147 - WARNING - Not Found: /api/api/device/generate3d
+2024-12-10 16:27:24,148 - WARNING - "POST /api/api/device/generate3d HTTP/1.1" 404 7993
+2024-12-10 16:30:16,989 - INFO - "GET /api/devices HTTP/1.1" 301 0
+2024-12-10 16:30:17,013 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-10 16:30:17,014 - INFO - 查询设备列表，总数：0
+2024-12-10 16:30:17,032 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-10 16:30:17,033 - INFO - "GET /api/devices/ HTTP/1.1" 200 2
+2024-12-10 16:30:17,258 - INFO - "GET /api/devices HTTP/1.1" 301 0
+2024-12-10 16:30:17,432 - DEBUG - (0.000) SELECT COUNT(*) AS "__count" FROM "config_api_device"; args=(); alias=default
+2024-12-10 16:30:17,432 - INFO - 查询设备列表，总数：0
+2024-12-10 16:30:17,433 - DEBUG - (0.000) SELECT "config_api_device"."id", "config_api_device"."name", "config_api_device"."ip_address", "config_api_device"."device_type_id", "config_api_device"."rack_number", "config_api_device"."position", "config_api_device"."status", "config_api_device"."last_updated" FROM "config_api_device" ORDER BY "config_api_device"."rack_number" ASC, "config_api_device"."position" ASC; args=(); alias=default
+2024-12-10 16:30:17,434 - INFO - "GET /api/devices/ HTTP/1.1" 200 2
+2024-12-10 16:30:19,893 - INFO - Django management command completed
+2024-12-10 16:30:20,494 - INFO - Django management command completed
+2024-12-10 16:30:21,596 - INFO - Starting Django management command
+2024-12-10 16:30:21,621 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-10 16:30:21,622 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-10 16:30:21,623 - INFO - 数据库文件权限: 666
+2024-12-10 16:30:21,623 - INFO - 数据库文件大小: 192512 bytes
+2024-12-10 16:30:21,624 - INFO - 数据库文件所有者: 0
+2024-12-10 16:30:22,465 - INFO - Starting Django management command
+2024-12-10 16:30:22,469 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-10 16:30:22,470 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-10 16:30:22,470 - INFO - 数据库文件权限: 666
+2024-12-10 16:30:22,470 - INFO - 数据库文件大小: 192512 bytes
+2024-12-10 16:30:22,471 - INFO - 数据库文件所有者: 0
+2024-12-10 16:30:23,010 - INFO - Watching for file changes with StatReloader
+2024-12-10 16:30:23,471 - INFO - Views module loaded
+2024-12-10 16:30:23,471 - INFO - Logger test from views.py
+2024-12-10 16:30:23,472 - ERROR - Logger error test from views.py
+2024-12-10 16:30:24,050 - INFO - Successfully imported ssh_cli
+2024-12-10 16:30:24,146 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-10 16:30:24,149 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-10 16:30:45,362 - WARNING - Not Found: /devices/
+2024-12-10 16:30:45,363 - WARNING - "GET /devices/ HTTP/1.1" 404 2213
+2024-12-10 16:30:45,604 - WARNING - Not Found: /devices/
+2024-12-10 16:30:45,604 - WARNING - "GET /devices/ HTTP/1.1" 404 2213
+2024-12-10 16:31:32,674 - WARNING - Not Found: /devices/
+2024-12-10 16:31:32,674 - WARNING - "GET /devices/ HTTP/1.1" 404 2213
+2024-12-10 16:37:36,259 - INFO - D:\MyWorkspace\djangoTest\config_api\urls.py changed, reloading.
+2024-12-10 16:37:36,629 - INFO - Starting Django management command
+2024-12-10 16:37:36,632 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-10 16:37:36,633 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-10 16:37:36,633 - INFO - 数据库文件权限: 666
+2024-12-10 16:37:36,633 - INFO - 数据库文件大小: 192512 bytes
+2024-12-10 16:37:36,634 - INFO - 数据库文件所有者: 0
+2024-12-10 16:37:37,232 - INFO - Watching for file changes with StatReloader
+2024-12-10 16:37:37,577 - INFO - Views module loaded
+2024-12-10 16:37:37,578 - INFO - Logger test from views.py
+2024-12-10 16:37:37,579 - ERROR - Logger error test from views.py
+2024-12-10 16:37:37,965 - INFO - Successfully imported ssh_cli
+2024-12-10 20:44:11,532 - INFO - C:\NPTI_CLI\Lib\ssh_cli.py changed, reloading.
+2024-12-10 20:44:11,998 - INFO - Starting Django management command
+2024-12-10 20:44:12,001 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-10 20:44:12,002 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-10 20:44:12,002 - INFO - 数据库文件权限: 666
+2024-12-10 20:44:12,002 - INFO - 数据库文件大小: 192512 bytes
+2024-12-10 20:44:12,002 - INFO - 数据库文件所有者: 0
+2024-12-10 20:44:12,529 - INFO - Watching for file changes with StatReloader
+2024-12-10 20:44:12,819 - INFO - Views module loaded
+2024-12-10 20:44:12,819 - INFO - Logger test from views.py
+2024-12-10 20:44:12,819 - ERROR - Logger error test from views.py
+2024-12-10 20:44:13,254 - INFO - Successfully imported ssh_cli
+2024-12-10 20:44:16,864 - INFO - C:\NPTI_CLI\Lib\SSHSimple.py changed, reloading.
+2024-12-10 20:44:17,185 - INFO - Starting Django management command
+2024-12-10 20:44:17,188 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-10 20:44:17,190 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-10 20:44:17,191 - INFO - 数据库文件权限: 666
+2024-12-10 20:44:17,192 - INFO - 数据库文件大小: 192512 bytes
+2024-12-10 20:44:17,192 - INFO - 数据库文件所有者: 0
+2024-12-10 20:44:17,689 - INFO - Watching for file changes with StatReloader
+2024-12-10 20:44:17,969 - INFO - Views module loaded
+2024-12-10 20:44:17,969 - INFO - Logger test from views.py
+2024-12-10 20:44:17,970 - ERROR - Logger error test from views.py
+2024-12-10 20:44:18,351 - INFO - Successfully imported ssh_cli
+2024-12-10 20:44:20,832 - INFO - C:\NPTI_CLI\Lib\SSHSimple.py changed, reloading.
+2024-12-10 20:44:21,163 - INFO - Starting Django management command
+2024-12-10 20:44:21,166 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-10 20:44:21,166 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-10 20:44:21,166 - INFO - 数据库文件权限: 666
+2024-12-10 20:44:21,166 - INFO - 数据库文件大小: 192512 bytes
+2024-12-10 20:44:21,167 - INFO - 数据库文件所有者: 0
+2024-12-10 20:44:21,660 - INFO - Watching for file changes with StatReloader
+2024-12-10 20:44:21,945 - INFO - Views module loaded
+2024-12-10 20:44:21,945 - INFO - Logger test from views.py
+2024-12-10 20:44:21,945 - ERROR - Logger error test from views.py
+2024-12-10 20:44:22,374 - INFO - Successfully imported ssh_cli
+2024-12-11 07:23:15,507 - INFO - D:\MyWorkspace\djangoTest\config_api\urls.py changed, reloading.
+2024-12-11 07:23:15,927 - INFO - Starting Django management command
+2024-12-11 07:23:15,931 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-11 07:23:15,931 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-11 07:23:15,931 - INFO - 数据库文件权限: 666
+2024-12-11 07:23:15,932 - INFO - 数据库文件大小: 192512 bytes
+2024-12-11 07:23:15,932 - INFO - 数据库文件所有者: 0
+2024-12-11 07:23:16,478 - INFO - Watching for file changes with StatReloader
+2024-12-11 07:23:16,811 - INFO - Views module loaded
+2024-12-11 07:23:16,811 - INFO - Logger test from views.py
+2024-12-11 07:23:16,813 - ERROR - Logger error test from views.py
+2024-12-11 07:23:17,256 - INFO - Successfully imported ssh_cli
+2024-12-11 07:23:17,352 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-11 07:23:17,356 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-11 07:23:45,184 - INFO - "GET /api HTTP/1.1" 301 0
+2024-12-11 07:23:45,216 - INFO - "GET /api/ HTTP/1.1" 200 10442
+2024-12-11 07:23:45,230 - INFO - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+2024-12-11 07:23:45,232 - INFO - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+2024-12-11 07:23:45,234 - INFO - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2024-12-11 07:23:45,237 - INFO - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+2024-12-11 07:23:45,242 - INFO - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+2024-12-11 07:23:45,245 - INFO - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+2024-12-11 07:23:45,248 - INFO - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+2024-12-11 07:23:45,251 - INFO - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+2024-12-11 07:23:45,254 - INFO - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2024-12-11 07:23:45,256 - INFO - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2024-12-11 07:23:45,258 - INFO - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+2024-12-11 07:23:45,263 - INFO - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2024-12-11 07:23:45,325 - WARNING - Not Found: /favicon.ico
+2024-12-11 07:23:45,326 - WARNING - "GET /favicon.ico HTTP/1.1" 404 2222
+2024-12-11 07:24:13,799 - INFO - Django management command completed
+2024-12-11 07:24:13,918 - INFO - Django management command completed
+2024-12-11 07:24:14,945 - INFO - Starting Django management command
+2024-12-11 07:24:14,949 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-11 07:24:14,950 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-11 07:24:14,950 - INFO - 数据库文件权限: 666
+2024-12-11 07:24:14,950 - INFO - 数据库文件大小: 192512 bytes
+2024-12-11 07:24:14,951 - INFO - 数据库文件所有者: 0
+2024-12-11 07:24:15,726 - INFO - Starting Django management command
+2024-12-11 07:24:15,730 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-11 07:24:15,730 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-11 07:24:15,731 - INFO - 数据库文件权限: 666
+2024-12-11 07:24:15,732 - INFO - 数据库文件大小: 192512 bytes
+2024-12-11 07:24:15,732 - INFO - 数据库文件所有者: 0
+2024-12-11 07:24:16,242 - INFO - Watching for file changes with StatReloader
+2024-12-11 07:24:16,534 - INFO - Views module loaded
+2024-12-11 07:24:16,534 - INFO - Logger test from views.py
+2024-12-11 07:24:16,535 - ERROR - Logger error test from views.py
+2024-12-11 07:24:16,921 - INFO - Successfully imported ssh_cli
+2024-12-11 07:24:16,983 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-11 07:24:16,986 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-11 11:15:22,326 - INFO - Django management command completed
+2024-12-11 11:15:22,485 - INFO - Django management command completed
+2024-12-11 18:22:31,280 - INFO - Starting Django management command
+2024-12-11 18:22:31,292 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-11 18:22:31,292 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-11 18:22:31,292 - INFO - 数据库文件权限: 666
+2024-12-11 18:22:31,293 - INFO - 数据库文件大小: 192512 bytes
+2024-12-11 18:22:31,293 - INFO - 数据库文件所有者: 0
+2024-12-11 18:22:31,658 - INFO - Starting Django management command
+2024-12-11 18:22:31,664 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-11 18:22:31,664 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-11 18:22:31,665 - INFO - 数据库文件权限: 666
+2024-12-11 18:22:31,665 - INFO - 数据库文件大小: 192512 bytes
+2024-12-11 18:22:31,665 - INFO - 数据库文件所有者: 0
+2024-12-11 18:22:31,798 - INFO - Watching for file changes with StatReloader
+2024-12-11 18:23:40,965 - INFO - Django management command completed
+2024-12-11 18:23:40,999 - INFO - Django management command completed
+2024-12-11 18:23:42,108 - INFO - Starting Django management command
+2024-12-11 18:23:42,115 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-11 18:23:42,115 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-11 18:23:42,116 - INFO - 数据库文件权限: 666
+2024-12-11 18:23:42,116 - INFO - 数据库文件大小: 192512 bytes
+2024-12-11 18:23:42,117 - INFO - 数据库文件所有者: 0
+2024-12-11 18:23:42,537 - INFO - Starting Django management command
+2024-12-11 18:23:42,544 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-11 18:23:42,544 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-11 18:23:42,544 - INFO - 数据库文件权限: 666
+2024-12-11 18:23:42,545 - INFO - 数据库文件大小: 192512 bytes
+2024-12-11 18:23:42,545 - INFO - 数据库文件所有者: 0
+2024-12-11 18:23:42,736 - INFO - Watching for file changes with StatReloader
+2024-12-11 18:23:42,936 - INFO - Views module loaded
+2024-12-11 18:23:42,936 - INFO - Logger test from views.py
+2024-12-11 18:23:42,937 - ERROR - Logger error test from views.py
+2024-12-11 18:23:43,008 - ERROR - Failed to import ssh_cli: No module named 'SSHLibrary'
+2024-12-11 18:23:43,065 - DEBUG - (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-11 18:23:43,086 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-11 18:26:41,248 - WARNING - Not Found: /api/api/devices
+2024-12-11 18:26:41,249 - WARNING - "GET /api/api/devices HTTP/1.1" 404 9442
+2024-12-11 18:31:48,177 - INFO - 获取设备列表
+2024-12-11 18:31:48,177 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 18:32:16,707 - INFO - 获取设备列表
+2024-12-11 18:32:16,708 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 18:33:47,658 - WARNING - Not Found: /api/api/devices
+2024-12-11 18:33:47,659 - WARNING - "GET /api/api/devices HTTP/1.1" 404 9442
+2024-12-11 18:35:28,255 - INFO - 获取设备列表
+2024-12-11 18:35:28,256 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 18:35:37,759 - WARNING - Not Found: /api/api/devices
+2024-12-11 18:35:37,759 - WARNING - "GET /api/api/devices HTTP/1.1" 404 9442
+2024-12-11 18:35:43,418 - WARNING - Not Found: /api/api/devices
+2024-12-11 18:35:43,419 - WARNING - "GET /api/api/devices HTTP/1.1" 404 9442
+2024-12-11 18:35:56,920 - INFO - 获取设备列表
+2024-12-11 18:35:56,920 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 18:54:37,231 - INFO - Starting Django management command
+2024-12-11 18:54:37,282 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-11 18:54:37,283 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-11 18:54:37,283 - INFO - 数据库文件权限: 666
+2024-12-11 18:54:37,283 - INFO - 数据库文件大小: 192512 bytes
+2024-12-11 18:54:37,283 - INFO - 数据库文件所有者: 0
+2024-12-11 18:54:37,849 - INFO - Starting Django management command
+2024-12-11 18:54:37,855 - INFO - 当前允许的主机IP: 192.168.0.110
+2024-12-11 18:54:37,856 - INFO - 数据库文件存在于: D:\MyWorkspace\djangoTest\db.sqlite3
+2024-12-11 18:54:37,856 - INFO - 数据库文件权限: 666
+2024-12-11 18:54:37,856 - INFO - 数据库文件大小: 192512 bytes
+2024-12-11 18:54:37,856 - INFO - 数据库文件所有者: 0
+2024-12-11 18:54:38,041 - INFO - Watching for file changes with StatReloader
+2024-12-11 18:54:38,406 - INFO - Views module loaded
+2024-12-11 18:54:38,406 - INFO - Logger test from views.py
+2024-12-11 18:54:38,406 - ERROR - Logger error test from views.py
+2024-12-11 18:54:38,412 - ERROR - Failed to import ssh_cli: No module named 'SSHLibrary'
+2024-12-11 18:54:38,486 - DEBUG - (0.016) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+2024-12-11 18:54:38,497 - DEBUG - (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2024-12-11 18:55:17,109 - INFO - 获取设备列表
+2024-12-11 18:55:17,110 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 18:55:29,531 - INFO - 获取设备列表
+2024-12-11 18:55:29,532 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 18:57:46,697 - ERROR - Internal Server Error: /api/device/generate3d
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8083/api/device/generate3d/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2024-12-11 18:57:46,709 - ERROR - "POST /api/device/generate3d HTTP/1.1" 500 75896
+2024-12-11 18:59:04,867 - INFO - 获取设备列表
+2024-12-11 18:59:04,868 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 18:59:05,119 - INFO - 获取设备列表
+2024-12-11 18:59:05,119 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 19:00:05,138 - INFO - 获取设备列表
+2024-12-11 19:00:05,139 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 19:00:05,177 - INFO - 获取设备列表
+2024-12-11 19:00:05,178 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 19:01:02,543 - INFO - 生成3D模型
+2024-12-11 19:01:02,544 - INFO - 处理设备类型: NPT1800, 图片数量: 0
+2024-12-11 19:01:02,545 - INFO - "POST /api/device/generate3d/ HTTP/1.1" 200 135
+2024-12-11 19:07:06,935 - INFO - 获取设备列表
+2024-12-11 19:07:06,936 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 19:07:07,030 - INFO - 获取设备列表
+2024-12-11 19:07:07,031 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 19:07:07,128 - INFO - 获取设备列表
+2024-12-11 19:07:07,129 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 19:07:07,192 - INFO - 获取设备列表
+2024-12-11 19:07:07,193 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 19:07:07,257 - INFO - 获取设备列表
+2024-12-11 19:07:07,257 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 19:07:07,310 - INFO - 获取设备列表
+2024-12-11 19:07:07,311 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 19:07:25,384 - INFO - 生成3D模型
+2024-12-11 19:07:25,392 - INFO - 处理设备类型: NPT1800, 图片数量: 0
+2024-12-11 19:07:25,393 - INFO - "POST /api/device/generate3d/ HTTP/1.1" 200 135
+2024-12-11 19:08:06,982 - INFO - 获取设备列表
+2024-12-11 19:08:06,983 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 19:08:07,000 - INFO - 获取设备列表
+2024-12-11 19:08:07,001 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 19:08:19,569 - INFO - 生成3D模型
+2024-12-11 19:08:19,571 - INFO - 处理设备类型: NPT1800, 图片数量: 0
+2024-12-11 19:08:19,571 - INFO - "POST /api/device/generate3d/ HTTP/1.1" 200 135
+2024-12-11 21:17:33,440 - INFO - 获取设备列表
+2024-12-11 21:17:33,440 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 21:17:33,639 - INFO - 获取设备列表
+2024-12-11 21:17:33,640 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 21:17:45,791 - INFO - 获取设备列表
+2024-12-11 21:17:45,792 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 21:19:01,805 - INFO - 生成3D模型
+2024-12-11 21:19:01,806 - INFO - 处理设备类型: NPT1800, 图片数量: 0
+2024-12-11 21:19:01,807 - INFO - "POST /api/device/generate3d/ HTTP/1.1" 200 135
+2024-12-11 21:29:06,532 - INFO - 获取设备列表
+2024-12-11 21:29:06,533 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 21:29:06,737 - INFO - 获取设备列表
+2024-12-11 21:29:06,738 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 21:30:00,469 - INFO - 获取设备列表
+2024-12-11 21:30:00,469 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-11 21:30:09,545 - INFO - 生成3D模型
+2024-12-11 21:30:09,548 - INFO - 处理设备类型: NPT1800, 图片数量: 0
+2024-12-11 21:30:09,549 - INFO - "POST /api/device/generate3d/ HTTP/1.1" 200 135
+2024-12-11 21:30:14,744 - INFO - 生成3D模型
+2024-12-11 21:30:14,744 - INFO - 处理设备类型: NPT1800, 图片数量: 0
+2024-12-11 21:30:14,746 - INFO - "POST /api/device/generate3d/ HTTP/1.1" 200 135
+2024-12-12 07:35:07,338 - INFO - 获取设备列表
+2024-12-12 07:35:07,338 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-12 07:35:07,618 - INFO - 获取设备列表
+2024-12-12 07:35:07,619 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-12 07:38:40,255 - INFO - 生成3D模型
+2024-12-12 07:38:40,275 - INFO - 处理设备类型: , 图片数量: 0
+2024-12-12 07:38:40,276 - INFO - "POST /api/device/generate3d/ HTTP/1.1" 200 135
+2024-12-12 08:17:09,260 - INFO - 获取设备列表
+2024-12-12 08:17:09,261 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-12 08:17:09,408 - INFO - 获取设备列表
+2024-12-12 08:17:09,408 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-12 08:17:29,517 - INFO - 获取设备模型: 1
+2024-12-12 08:17:29,519 - INFO - "GET /api/devices/1/model/ HTTP/1.1" 200 49
+2024-12-12 08:22:56,955 - INFO - 获取设备列表
+2024-12-12 08:22:56,955 - INFO - "GET /api/devices/ HTTP/1.1" 200 66
+2024-12-12 15:20:42,056 - INFO - 正在获取构建历史...
+2024-12-12 15:20:42,076 - DEBUG - (0.000) SELECT COUNT(*) FROM (SELECT "config_api_build"."id" AS "col1" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6) subquery; args=(); alias=default
+2024-12-12 15:20:42,080 - INFO - 找到 2 条构建记录
+2024-12-12 15:20:42,080 - WARNING - Not Found: /api/config/
+2024-12-12 15:20:42,083 - DEBUG - (0.000) SELECT "config_api_build"."id", "config_api_build"."upgrade_type", "config_api_build"."work_type", "config_api_build"."ne_ip", "config_api_build"."ne_ip_input", "config_api_build"."version_path", "config_api_build"."status", "config_api_build"."created_at", "config_api_build"."updated_at" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6; args=(); alias=default
+2024-12-12 15:20:42,083 - WARNING - "GET /api/config/ HTTP/1.1" 404 9430
+2024-12-12 15:20:42,087 - INFO - 序列化数据: [{'id': 3, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\R&D TN China\\R&D_Server\\Version Management\\Dev_Version\\TempVersion\\NPTI\\V9.4\\9.4.00179-develop', 'status': 'failed', 'created_at': '2024-12-05T11:57:35.793596Z', 'updated_at': '2024-12-05T11:57:36.499598Z'}, {'id': 2, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\path\\to\\version', 'status': 'stopped', 'created_at': '2024-12-04T10:50:39.628929Z', 'updated_at': '2024-12-05T11:57:42.377614Z'}]
+2024-12-12 15:20:42,089 - INFO - "GET /api/build/ HTTP/1.1" 200 602
+2024-12-12 15:26:55,997 - WARNING - Not Found: /api/config/
+2024-12-12 15:26:55,998 - WARNING - "GET /api/config/ HTTP/1.1" 404 9430
+2024-12-12 15:26:55,999 - INFO - 正在获取构建历史...
+2024-12-12 15:26:56,000 - DEBUG - (0.000) SELECT COUNT(*) FROM (SELECT "config_api_build"."id" AS "col1" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6) subquery; args=(); alias=default
+2024-12-12 15:26:56,001 - INFO - 找到 2 条构建记录
+2024-12-12 15:26:56,002 - DEBUG - (0.000) SELECT "config_api_build"."id", "config_api_build"."upgrade_type", "config_api_build"."work_type", "config_api_build"."ne_ip", "config_api_build"."ne_ip_input", "config_api_build"."version_path", "config_api_build"."status", "config_api_build"."created_at", "config_api_build"."updated_at" FROM "config_api_build" ORDER BY "config_api_build"."created_at" DESC LIMIT 6; args=(); alias=default
+2024-12-12 15:26:56,003 - INFO - 序列化数据: [{'id': 3, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\R&D TN China\\R&D_Server\\Version Management\\Dev_Version\\TempVersion\\NPTI\\V9.4\\9.4.00179-develop', 'status': 'failed', 'created_at': '2024-12-05T11:57:35.793596Z', 'updated_at': '2024-12-05T11:57:36.499598Z'}, {'id': 2, 'upgrade_type': 'force', 'work_type': 'multi_process', 'ne_ip': '200.200.18.102', 'ne_ip_input': '', 'version_path': '\\\\netstore-ch\\path\\to\\version', 'status': 'stopped', 'created_at': '2024-12-04T10:50:39.628929Z', 'updated_at': '2024-12-05T11:57:42.377614Z'}]
+2024-12-12 15:26:56,003 - INFO - "GET /api/build/ HTTP/1.1" 200 602
+2024-12-12 17:54:05,813 - INFO - "GET /api/ HTTP/1.1" 200 5526
+2024-12-12 17:54:05,905 - WARNING - Not Found: /favicon.ico
+2024-12-12 17:54:05,905 - WARNING - "GET /favicon.ico HTTP/1.1" 404 2222

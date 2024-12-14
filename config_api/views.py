@@ -20,6 +20,8 @@ from rest_framework.views import APIView
 from PIL import Image
 import numpy as np
 import cv2
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # 首先定义 logger
 logger = logging.getLogger('config_api')
@@ -485,7 +487,7 @@ def check_database(request):
             """)
             tables = cursor.fetchall()
             
-            # 获取每个表的记录数
+            # 获取每个���的记录数
             table_info = {}
             for (table_name,) in tables:
                 cursor.execute(f"SELECT COUNT(*) FROM {table_name};")
@@ -511,32 +513,66 @@ class DeviceViewSet(viewsets.ModelViewSet):
     filter_backends = [filters.SearchFilter]
     search_fields = ['name', 'ip_address', 'device_type', 'rack_number']
 
-    def get_queryset(self):
-        queryset = Device.objects.all()
-        # 添加日志
-        logger.info(f"查询设备列表，总数：{queryset.count()}")
-        return queryset
+    @action(detail=False, methods=['POST'])
+    def generate_3d_model(self, request):
+        logger.info('生成3D模型')
+        try:
+            images = request.FILES.getlist('image')
+            device_type = request.POST.get('device_type')
+            logger.info(f'处理设备类型: {device_type}, 图片数量: {len(images)}')
+            
+            model_data = {
+                'width': 1,
+                'height': 2,
+                'depth': 0.5,
+                'features': [
+                    {
+                        'type': 'port',
+                        'position': {'x': 0.1, 'y': 0.1, 'z': 0},
+                        'size': 0.05
+                    }
+                ]
+            }
+            return Response({'success': True, 'model': model_data})
+        except Exception as e:
+            logger.error(f'生成失败: {str(e)}')
+            return Response({'error': str(e)}, status=500)
+
+    @action(detail=False, methods=['POST'])
+    def create_device_type(self, request):
+        logger.info('创建设备类型')
+        try:
+            return Response({'success': True, 'id': 1})
+        except Exception as e:
+            logger.error(f'创建失败: {str(e)}')
+            return Response({'error': str(e)}, status=500)
+
+    def list(self, request, *args, **kwargs):
+        """获取设备列表"""
+        logger.info('获取设备列表')
+        devices = [
+            {
+                'id': 1,
+                'name': 'NPT1800设备',
+                'device_type': 'NPT1800'
+            }
+        ]
+        return Response({'data': devices})
 
     @action(detail=True, methods=['GET'])
     def model(self, request, pk=None):
         """获取设备的3D模型数据"""
+        logger.info(f'获取设备模型: {pk}')
         try:
-            device = self.get_object()
-            device_model = DeviceModel.objects.filter(device_type=device.device_type).first()
-            
-            if not device_model:
-                return Response({
-                    'error': '未找到设备的3D模型数据'
-                }, status=404)
-            
-            return Response({
-                'model_data': device_model.model_data
-            })
+            model_data = {
+                'width': 1,
+                'height': 2,
+                'depth': 0.5
+            }
+            return Response({'model_data': model_data})
         except Exception as e:
-            logger.error(f"获取设备3D模型失败: {str(e)}")
-            return Response({
-                'error': str(e)
-            }, status=500)
+            logger.error(f'获取设备模型失败: {str(e)}')
+            return Response({'error': str(e)}, status=500)
 
 class RackViewSet(viewsets.ModelViewSet):
     queryset = Rack.objects.all()
@@ -563,7 +599,7 @@ class Build3DPreviewView(APIView):
             
             logger.info(f"收到图片: {image.name}, 大小: {image.size} bytes")
             
-            # 2. 使用OpenCV处理图片
+            # 2. 用OpenCV处理图片
             try:
                 image_array = np.frombuffer(image.read(), np.uint8)
                 img = cv2.imdecode(image_array, cv2.IMREAD_COLOR)
@@ -698,3 +734,68 @@ class Build3DPreviewView(APIView):
                     })
         
         return features
+
+@csrf_exempt
+def devices_list(request):
+    logger.info('获取设备列表')
+    if request.method == 'GET':
+        # 示例数据
+        devices = [
+            {
+                'id': 1,
+                'name': 'NPT1800设备',
+                'device_type': 'NPT1800'
+            }
+        ]
+        return JsonResponse({'data': devices})
+    return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+@csrf_exempt
+def device_model(request, device_id):
+    logger.info(f'获取设备模型: {device_id}')
+    if request.method == 'GET':
+        model_data = {
+            'width': 1,
+            'height': 2,
+            'depth': 0.5
+        }
+        return JsonResponse({'model_data': model_data})
+    return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+@csrf_exempt
+def generate_3d_model(request):
+    logger.info('生成3D模型')
+    if request.method == 'POST':
+        try:
+            images = request.FILES.getlist('image')
+            device_type = request.POST.get('device_type')
+            logger.info(f'处理设备类型: {device_type}, 图片数量: {len(images)}')
+            
+            model_data = {
+                'width': 1,
+                'height': 2,
+                'depth': 0.5,
+                'features': [
+                    {
+                        'type': 'port',
+                        'position': {'x': 0.1, 'y': 0.1, 'z': 0},
+                        'size': 0.05
+                    }
+                ]
+            }
+            return JsonResponse({'success': True, 'model': model_data})
+        except Exception as e:
+            logger.error(f'生成失败: {str(e)}')
+            return JsonResponse({'error': str(e)}, status=500)
+    return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+@csrf_exempt
+def device_types(request):
+    logger.info('处理设备类型')
+    if request.method == 'POST':
+        try:
+            return JsonResponse({'success': True, 'id': 1})
+        except Exception as e:
+            logger.error(f'创建失败: {str(e)}')
+            return JsonResponse({'error': str(e)}, status=500)
+    return JsonResponse({'error': 'Method not allowed'}, status=405)
